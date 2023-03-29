@@ -5,7 +5,7 @@ Nosso projeto consiste em um achado e perdidos virtual da PucMinas, onde usuario
 ## Alunos integrantes da equipe
 
 * Miguel Oliveira Bizzi
-* Nome completo do aluno 2
+* Danilo Mascarenhas Loose
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 * Nome completo do aluno 4

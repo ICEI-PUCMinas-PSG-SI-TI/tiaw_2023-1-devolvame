@@ -1,0 +1,27 @@
+/* Importanto variaveis de cord */
+@import url(./variables.css);
+
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background: linear-gradient(120deg, var(--secondary) 40%, var(--primary) 100%);
+}

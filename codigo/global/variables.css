@@ -1,0 +1,8 @@
+:root {
+    --primary: rgba(113,89,193,1);
+    --primary_light: rgba(113,89,193,0.7);
+    --secondary: rgba(155,73,193,1);
+    --secondary_light: rgba(155,73,193,0.7);
+    --white: #fff;
+
+}

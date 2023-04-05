@@ -55,6 +55,10 @@ header a button {
 
     cursor: pointer;
     transition: 0.2s;
+
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
 }
 
 header a button:hover{

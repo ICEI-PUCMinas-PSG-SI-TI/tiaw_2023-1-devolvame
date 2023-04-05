@@ -7,6 +7,7 @@ header {
     position: relative;
 
     width: 100%;
+    height: 10vh;
     padding: 2rem 2.5rem;
 
     display: flex;
@@ -55,10 +56,193 @@ header a button {
 
     cursor: pointer;
     transition: 0.2s;
+
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
 }
 
 header a button:hover{
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* FIM HEADER */
+
+/* COMECO MAIN */
+
+main {
+    margin: 3rem 2.5rem;
+
+    height: 100vh;
+}
+
+main .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex: 1;
+}
+
+main .top-row h1 {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+main .top-row .button-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+main .top-row .button-group button {
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+}
+
+main .top-row .button-group button i{
+    margin-left: 5px;
+}
+
+main .top-row .button-group button.filter-button {
+    background-color: var(--white);
+    color: var(--secondary);
+
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+}
+
+main .top-row .button-group button.add-button {
+    background-color: var(--success);
+    color: var(--white);
+
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+}
+
+.list-container {
+    flex: 1;
+
+    margin-top: 25px;
+    padding: 1.5rem;
+
+    border-radius: 0.5rem;
+    background-color: var(--white);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.object-card {
+    position: relative;
+
+    flex: 1;
+    height: 180px;
+
+    display: flex;
+
+    border: 1px solid;
+    border-color: var(--primary_light);
+    border-radius: 0.5rem;
+}
+
+.object-card .image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30%;
+    height: 100%;
+
+}
+
+.object-card .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.object-card .details{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.object-card .details h3{
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.object-card .details .info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+}
+
+.object-card .details .info .row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.object-card .details .info .row .icon-container{
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--primary_light);
+    font-size: 1rem;
+}
+
+.object-card .details .info .row  span{
+    margin-left: 5px;
+    font-size: 1rem;
+    color: var(--primary_light);
+}
+
+.object-card .details button{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.object-card .details button i{
+    margin-left: 5px;
+}
+
+@media (max-width: 1020px) {
+    main {
+        height: auto;
+    }
+
+    .list-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1.5rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -66,6 +250,8 @@ header a button:hover{
         flex-direction: column;
         justify-content: center;
         gap: 1.3rem;
+
+        height: auto;
     }
 
     header nav a{
@@ -76,17 +262,50 @@ header a button:hover{
         width: 100%;
         font-size: 0.8rem;
     }
+
+    main .top-row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+    
+        flex: 1;
+    }
+
+    .object-card {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .object-card .image-container{
+        width: 100%;
+        height: 200px;
+        flex-direction: column;
+        margin-bottom: 0.5rem;
+    }
+
+    .object-card .image-container img{
+        object-fit: contain;
+    }
+
+    .object-card .details .info{
+        padding-top: 0.7rem;
+    }
+
+    .object-card .details button{
+        position: relative;
+        bottom: auto;
+        right: auto;
+
+        margin-top: 10px;
+    }
 }
 
-/* FIM HEADER */
+@media (max-width: 425px) {
+    main .top-row .button-group{
+        width: 100%;
 
-/* COMECO MAIN */
-
-main {
-    margin: 3rem 2.5rem;
-}
-
-main h1 {
-    color: var(--white);
-    font-size: 2.5rem;
+        flex-direction: column;
+    }
 }

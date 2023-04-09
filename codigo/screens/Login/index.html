@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +13,13 @@
     <!-- Link Css Global -->
     <link rel="stylesheet" href="../../global/global.css">
 </head>
+
 <body>
     <header>
         <h3>DevolvaMe</h3>
         <nav>
-            <a href="../Home/index.html">Home</a><span>|</span> 
-            <a href="../Listagem/index.html">Listagem</a><span>|</span> 
+            <a href="../Home/index.html">Home</a><span>|</span>
+            <a href="../Listagem/index.html">Listagem</a><span>|</span>
             <a href="../Contato/index.html">Contato</a><span>|</span>
             <a href="../Sobre/index.html">Sobre</a>
         </nav>
@@ -27,7 +29,30 @@
             </button>
         </a>
     </header>
+
+    <main>
+        <form>
+            <h3>Login</h3>
+            <div>
+                <label for="user">Usuário: </label>
+                <i class="fa-solid fa-user icon"></i>
+                <input type="text" name="user" placeholder="Digite seu usuário...">
+            </div>
+            <div>
+                <label for="password">Senha: </label>
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" name="password" placeholder="Digite sua senha...">
+            </div>
+            <button> Entrar </button>
+            <p class="text-details"> Não possui conta? <a href="#"> Cadastre-se </a></p>
+        </form>
+    </main>
+
     <!-- Script Js -->
     <script src="./script.js"></script>
+
+    <!-- Font Awesome  -->
+    <script src="https://kit.fontawesome.com/f5419ab9d1.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

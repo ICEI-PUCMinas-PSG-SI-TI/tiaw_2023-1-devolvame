@@ -83,3 +83,98 @@ header a button:hover{
 }
 
 /* FIM HEADER */
+
+/* COMECO MAIN  */
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 82vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    width: 30%;
+    margin: auto;
+    color: var(--primary);
+    font-weight: 600;
+
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+}   
+
+form h3{
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+form div > *{
+    margin-bottom: 0.3rem;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form input {
+    width: auto;
+    padding: 0.6rem 1.3rem;
+    background: none;
+    font-size: 0.95rem;
+    border: 0.1px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+form > div > * {
+    display: block;
+    width: 100%;
+}
+
+form button {
+    margin-bottom: 1rem;
+    padding: 0.8rem 5rem;
+
+    font-size: medium;
+    font-weight: bold;
+
+    color: var(--white);
+
+    border: none;
+    border-radius: 0.5rem;
+    /* background-color: var(--primary); */
+    background: linear-gradient(0deg, var(--secondary) 5%, var(--primary) 100%) repeat;
+
+    cursor: pointer;
+    transition: 0.5s;
+
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+}
+
+form button:hover{
+    transition: 0.5s;
+    color: var(--white);
+    background-color: var(--secondary);
+
+}
+
+
+main .text-details{
+    font-weight: lighter;
+    text-align: center;
+    color: #aaa;
+}
+
+main .text-details a{
+    color: var(--primary);
+    font-weight: bold;
+}

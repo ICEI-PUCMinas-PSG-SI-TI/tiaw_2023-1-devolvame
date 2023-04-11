@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +12,19 @@
 
     <!-- Link Css Global -->
     <link rel="stylesheet" href="../../global/global.css">
+
+    <!-- Link FontAwesome BABI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
 </head>
+
 <body>
     <header>
         <h3>DevolvaMe</h3>
         <nav>
-            <a href="../Home/index.html">Home</a><span>|</span> 
-            <a href="../Listagem/index.html">Listagem</a><span>|</span> 
+            <a href="../Home/index.html">Home</a><span>|</span>
+            <a href="../Listagem/index.html">Listagem</a><span>|</span>
             <a href="../Contato/index.html">Contato</a><span>|</span>
             <a href="../Sobre/index.html">Sobre</a>
         </nav>
@@ -27,10 +34,48 @@
             </button>
         </a>
     </header>
+
+
     <main>
         <h1>Contato</h1>
+
+        <!-- BABI-->
+
+        <div class="geral">
+
+            <div class="localizacao">
+                <h2>Localização</h2>
+                <p><i class="fas fa-map-marker-alt icon"></i> Puc Minas - São Gabriel</p>
+                <img src="img/maps.jpg">
+            </div>
+
+            <div class="formulario">
+                <h2>Formulário de Contato</h2>
+
+                <div class="campos">
+                    <div class="campo">
+                        <label for="pesquisa">Nome:</label>
+                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"placeholder="Digite seu nome...">
+                    </div>
+                    <div class="campo">
+                        <label for="pesquisa">Email:</label>
+                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"placeholder="Digite seu email...">
+                    </div>
+                    <div class="campo">
+                        <label for="pesquisa">Mensagem:</label>
+                        <textarea rows="5" placeholder="Digite sua mensagem"></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </div>
+
+
+            </div>
+        </div>
+
     </main>
     <!-- Script Js -->
     <script src="./script.js"></script>
+
 </body>
+
 </html>

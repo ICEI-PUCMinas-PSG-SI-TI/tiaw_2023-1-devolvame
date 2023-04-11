@@ -1,6 +1,10 @@
 /* Importanto variaveis de cores do arquivo global */
 @import url(../../global/variables.css);
 
+body{
+    height: 100vh;
+}
+
 /* COMECO HEADER */
 
 header {
@@ -89,8 +93,7 @@ header a button:hover{
 main{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 82vh;
+    height: 70vh;
 }
 
 form{
@@ -100,7 +103,7 @@ form{
     padding: 1.5rem;
     border-radius: 0.5rem;
     background-color: var(--white);
-    width: 30%;
+    width: 65%;
     margin: auto;
     color: var(--primary);
     font-weight: 600;
@@ -123,14 +126,21 @@ form div {
     margin-bottom: 1rem;
 }
 
+form i{
+    position: relative;
+    left: 10px;
+    top: 13px;
+    display: inline!important;
+}
+
 form input {
+    margin-top: -20px;
     width: auto;
-    padding: 0.6rem 1.3rem;
+    padding: 0.6rem 2.2rem;
     background: none;
     font-size: 0.95rem;
     border: 0.1px solid var(--primary);
     border-radius: 0.5rem;
-    padding: 1rem;
 }
 
 form > div > * {
@@ -178,3 +188,39 @@ main .text-details a{
     color: var(--primary);
     font-weight: bold;
 }
+
+
+@media screen and (min-width: 576px){ 
+    main{ 
+        height: 80vh;
+    } 
+
+    main form{
+        width: 50%;
+    }
+}
+@media screen and (min-width: 767px){
+    main form{
+        width: 50%;
+    }
+
+}
+@media screen and (min-width: 991px){
+    main form{
+        width: 40%;
+    }
+
+
+}
+@media screen and (min-width: 1199px){
+    main form{
+        width: 40%;
+    }
+}
+@media screen and (min-width: 1399px){ 
+    main form{
+        width: 30%;
+    }
+}
+
+/* FIM MAIN  */

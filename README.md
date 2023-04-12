@@ -11,11 +11,15 @@ Nosso projeto consiste em um achado e perdidos virtual da PucMinas, onde usuario
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Gabriel Barbosa da Fonseca
+* João Caram Santos de Oliveira
 
 ## Quadro de tarefas
-Coloque aqui o link para acesso do Kanban do projeto, seja ele no GitHub ou em outra plataforma.
+A plataforma utilizada para controle de tarefas foi o Notion. 
+[Quadro de Tarefas](https://ajar-hemisphere-aff.notion.site/Controle-de-atividades-d5b5f891e66d4528824650274ef83fcf)
 
 ## Instruções para uso
 Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo).
+
+A página inicial do projeto se encontra em:
+codigo/screens/Home/index.html

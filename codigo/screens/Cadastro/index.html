@@ -32,25 +32,33 @@
 
     <main>
         <form>
-            <h3>Login</h3>
-            <div>
-                <label for="user">Usuário: </label>
-                <i class="fa-solid fa-user icon"></i>
+            <h3>Cadastro</h3>
+            <label for="user">Usuário: </label>
+            <div class="flex">
+                <div class="icon">
+                    <i class="fa-solid fa-user icon"></i>
+                </div>
                 <input type="text" id="user" name="user" placeholder="Digite seu usuário...">
             </div>
-            <div>
-                <label for="email">Email: </label>
-                <i class="fa-solid fa-envelope"></i>
+            <label for="email">Email: </label>
+            <div class="flex">
+                <div id="email-box" class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
                 <input id="email" type="email" name="email" placeholder="Digite seu email...">
             </div>
-            <div>
-                <label for="password">Senha: </label>
-                <i class="fa-solid fa-lock icon"></i>
+            <label for="password">Senha: </label>
+            <div class="flex">
+                <div class="icon">
+                    <i class="fa-solid fa-lock icon"></i>
+                </div>
                 <input id="password" type="password" name="password" placeholder="Digite sua senha...">
             </div>
-            <div>
-                <label for="passwordConfirm">Confirme a Senha: </label>
-                <i class="fa-solid fa-lock icon"></i>
+            <label for="passwordConfirm">Confirme a Senha: </label>
+            <div class="flex">
+                <div class="icon">
+                    <i class="fa-solid fa-lock icon"></i>
+                </div>
                 <input id="passwordConfirm" type="password" name="passwordConfirm" placeholder="Confirme sua senha...">
             </div>
             <button> Entrar </button>

@@ -8,7 +8,7 @@ Nosso projeto consiste em um achado e perdidos virtual da PucMinas, onde usuario
 * Danilo Mascarenhas Loose
 * Barbara Giovana Batista Cirilo
 * João Victor Alves Moreira
-
+*Rodrigo Rangel
 ## Professores responsáveis
 
 * Gabriel Barbosa da Fonseca

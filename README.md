@@ -23,5 +23,3 @@ Coloque aqui as instruções para acessar a página inicial do projeto (caminho 
 
 A página inicial do projeto se encontra em:
 codigo/screens/Home/index.html
-
-teste

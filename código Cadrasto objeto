@@ -1,0 +1,103 @@
+/<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevolvaMe - Listagem</title>
+
+    <!-- Link Css -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Link Css Global -->
+    <link rel="stylesheet" href="../../global/global.css">
+</head>
+<body>
+    <header>
+        <h3>DevolvaMe</h3>
+        <nav>
+            <a href="../Home/index.html">Home</a><span>|</span> 
+            <a href="../Listagem/index.html">Listagem</a><span>|</span> 
+            <a href="../Contato/index.html">Contato</a><span>|</span>
+            <a href="../Sobre/index.html">Sobre</a>
+        </nav>
+        <a href="../Login/index.html">
+            <button>
+                Login
+            </button>
+        </a>
+    </header>
+    <main>
+        <div class="top-row">
+            <h1>Listagem</h1>
+            <div class="button-group">
+                <button class="filter-button">
+                    Filtro
+                    <i class="fa-solid fa-filter"></i>
+                </button>
+                <button class="add-button">
+                    Achei ou perdi um objeto
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="list-container">
+            <div class="object-card">
+                <div class="image-container">
+                    <img src="https://images.tcdn.com.br/img/img_prod/548537/garrafa_termica_flip_straw_stanley_651ml_lagoon_18209_1_defa16f920ee19d390a80cf7ae7d042b_20230301162446.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>Garrafa d'agua</h3>
+
+                    <div class="info">
+                        <div class="row">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <span>Garrafas</span>
+                        </div>
+                        <div class="row">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span>Bloco J - Sala 101</span>
+                        </div>
+                        <div class="row">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <span>02/03/23 - 15:30h</span>
+                        </div>
+                    </div>
+
+                    <button>
+                        Ver mais <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="object-card">
+                <div class="image-container">
+                    <img src="https://images.tcdn.com.br/img/img_prod/548537/garrafa_termica_flip_straw_stanley_651ml_lagoon_18209_1_defa16f920ee19d390a80cf7ae7d042b_20230301162446.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h3>Garrafa d'agua</h3>
+
+                    <div class="info">
+                        <div class="row">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <span>Estojo</span>
+                        </div>
+                        <div class="row">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span>Bloco J - Sala 101</span>
+                        </div>
+                        <div class="row">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <span>02/03/23 - 15:30h</span>
+                        </div>

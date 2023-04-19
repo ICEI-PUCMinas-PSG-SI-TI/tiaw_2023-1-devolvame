@@ -1,21 +1,19 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  COLOQUE AQUI O SEU TEXTO ......
+DevolvaMe
 
 `CURSO` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Sistemas de Informação
 
 ## Participantes
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
->
-> Os membros do grupo são: 
-> - Fulano da Silva
-> - Ciclano Albuquerque
+* Miguel Oliveira Bizzi
+* Danilo Mascarenhas Loose
+* Barbara Giovana Batista Cirilo
+* João Victor Alves Moreira
+* Rodrigo Rangel
 
 # Estrutura do Documento
 
@@ -47,11 +45,10 @@
 > houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
 > fato existir, pois ainda não é a hora de apresentar requisitos
 > detalhados ou projetos. Utilize como base a ficha inicial de detalhamento do problema.
->
 
 ## Objetivos
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Nosso princípal objetivo é desenvolver um sistema amigavel e de facil uso para que possa se encontrar objetos perdidos e cadastrar objetos encontrados no campos da PUCMINAS. Com isso, conseguiremos solucionar o problema supracitado.
 
 > Aqui você deve descrever os objetivos do trabalho indicando que o
 > objetivo geral é desenvolver um software para solucionar o problema
@@ -64,7 +61,7 @@
 
 ## Público-Alvo
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Estudantes, professores, fisitantes e funcionários da PUCMINAS
 
 > Descreva quem serão as pessoas que usarão a sua aplicação indicando os
 > diferentes perfis. O objetivo aqui não é definir quem serão os
@@ -83,7 +80,7 @@
  
 # Especificações do Projeto
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Utilizaremos as técnologias HTML5, CSS3 e JavaScript
 
 > Apresente uma visão geral do que será abordado nesta parte do
 > documento, enumerando as técnicas e/ou ferramentas utilizadas para

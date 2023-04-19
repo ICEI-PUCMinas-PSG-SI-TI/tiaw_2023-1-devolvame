@@ -80,7 +80,7 @@ Estudantes, professores, fisitantes e funcionários da PUCMINAS
  
 # Especificações do Projeto
 
-Utilizaremos as técnologias HTML5, CSS3 e JavaScript
+......  COLOQUE AQUI O SEU TEXTO ......
 
 > Apresente uma visão geral do que será abordado nesta parte do
 > documento, enumerando as técnicas e/ou ferramentas utilizadas para
@@ -146,7 +146,8 @@ A tabela que segue apresenta os requisitos funcionais do projeto.
 
 # Projeto da Solução
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Utilizaremos as técnologias HTML5, CSS3 e JavaScript para construir nosso sistema
+
 > Descreva brevemente quais tecnologias e/ou frameworks foram utilizados no projeto.
 
 ## Wireframes

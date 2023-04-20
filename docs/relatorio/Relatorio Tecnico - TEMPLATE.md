@@ -37,7 +37,7 @@ Sistemas de Informação
 
 ## Problema
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Em algum momento, pessoas podem se destrair e deixar um objeto para trás e perder-lo. No ambiente da PUC, muitos nem se quer sabem onde há e se existe um achados e perdidos da PUC, com nosso sistema iremos facilitar essa comunicação entre o dono o objeto e o objeto.
 
 > Nesse momento você deve apresentar o problema que a sua aplicação deve
 > resolver. No entanto, não é a hora de comentar sobre a aplicação.
@@ -80,7 +80,7 @@ Estudantes, professores, fisitantes e funcionários da PUCMINAS
  
 # Especificações do Projeto
 
-......  COLOQUE AQUI O SEU TEXTO ......
+No nosso projeto o usuário deverá fazer login para ter acesso a uma listagem de objetos perdidos, onde ele podera procurar, filtrar e encontrar o seu objeto. O usuário poderá tambem cadastrar um novo objeto perdido no qual ele encontrar. Os objetos terão informações importantes de onde e quando ele foi achado.
 
 > Apresente uma visão geral do que será abordado nesta parte do
 > documento, enumerando as técnicas e/ou ferramentas utilizadas para
@@ -113,8 +113,10 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Usuário do sistema  | Achar meus objetos perdidos        | Recupera-los             |
+|Usuário do sistema | Filtrar e facilmente encontrar meu objeto | Recupera-los rapidamente |
+|Usuário do sistema | Cadastrar um objeto que encontrei perdido | Ajudar o dono a recuperar-lo |
+|Usuário do sistema | Um site funcional para smartphone | Ter uma experiencia melhor |
 
 > Seguindo o modelo acima, apresente aqui as histórias de usuário que são relevantes para o
 > projeto de sua solução. As Histórias de Usuário consistem em uma
@@ -133,9 +135,10 @@ A tabela que segue apresenta os requisitos funcionais do projeto.
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
-
+|RF-001| Permitir que o usuário cadastre objetos | ALTA | 
+|RF-002| Permitir que o usuário filtre objetos   | MÉDIA |
+|RF-003| Permitir que o sistema liste objetos   | ALTA |
+|RF-003| Permitir que o usuário cadastre-se e faça login   | ALTA |
 
 > Com base nas Histórias de Usuário, enumere os requisitos da sua
 > solução. Classifique esses requisitos em dois grupos:
@@ -152,7 +155,7 @@ Utilizaremos as técnologias HTML5, CSS3 e JavaScript para construir nosso siste
 
 ## Wireframes
 
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
+[Wireframe feito pelo figma](https://www.figma.com/file/ZUPpR3AIpoFBzwI2hSlocU/Devolva.me?node-id=0%3A1&t=8qkUtEnqNNoaBx8t-1)
 
 > Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
 > estrutura de um site web e seu relacionamentos entre suas

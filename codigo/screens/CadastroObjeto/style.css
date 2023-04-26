@@ -1,0 +1,286 @@
+/* Importanto variaveis de cores do arquivo global */
+@import url(../../global/variables.css);
+
+/* COMECO HEADER */
+
+header {
+    position: relative;
+
+    width: 100%;
+    padding: 2rem 2.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header h3 {
+    color: var(--white);
+    cursor: default;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+header nav a {
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header nav span {
+    color: var(--white);
+    opacity: 0.4;
+}
+
+header a button {
+    width: auto;
+    padding: 0.6rem 1.3rem;
+
+    background: none;
+    font-size: 0.95rem;
+    color: var(--white);
+
+    border: 0.1px solid var(--white);
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+    transition: 0.2s;
+
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+}
+
+header a button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.3rem;
+    }
+
+    header nav a{
+        font-size: 0.8rem;
+    }
+
+    header a, header a button{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+}
+
+/* FIM HEADER */
+
+/* COMECO MAIN */
+
+main {
+    margin: 3rem 2.5rem;
+    height: 80vh;
+}
+
+main h1 {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.list-container {
+    flex: 1;
+
+    margin-top: 25px;
+    padding: 1.5rem;
+
+    border-radius: 0.5rem;
+    background-color: var(--white);
+}
+
+.grid-container1{
+    display: grid;
+    grid-template-columns: 50% 25% auto;
+    grid-gap: 1.5rem;
+}
+
+.grid-container2{
+    margin-top: 1.5rem;
+
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-gap: 1.5rem;
+}
+
+.input-group {
+}
+
+.input-group label, .upload-container h4{
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--primary_light);
+}
+
+.input-group input, .input-group textarea, .input-group select{
+    width: 100%;
+
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    padding: 0.9rem; 
+
+    outline: none;
+    display: block;
+
+    border-width: 1px;
+    border-color: var(--primary_light);
+}
+
+.input-group textarea, .input-group select, .input-group input[type="date"] {
+    color: var(--primary_light);
+}
+
+.input-group select option {
+    color: var(--primary);
+    font-size: 1rem;
+
+    margin-bottom: 10px;
+}
+
+.input-group input::placeholder, .input-group textarea::placeholder{
+    color: var(--primary_light);
+}
+
+.upload-container {
+    margin-top: 1.5rem;
+}
+
+.upload {
+    width: 100%;
+    padding: 0.9rem; 
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--primary_light);
+}
+
+.upload i {
+    color: var(--primary_light);
+    font-size: 5rem;
+
+    margin: 10px 0;
+}
+
+.upload h5 {
+    color: var(--primary_light);
+    font-size: 1rem;
+
+}
+
+.upload span {
+    color: var(--primary_light);
+    font-size: 0.8rem;
+
+    margin: 10px 0;
+}
+
+.upload button {
+    padding: 0.5rem 1rem;
+    margin-bottom: 15px;
+
+    border-radius: 1rem;
+    border: none;
+
+    background-color: var(--primary);
+    color: var(--white);
+
+    cursor: pointer;
+
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+}
+
+.button-container {
+    width: 100%;
+
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-container button {
+    padding: 0.7rem 3rem;
+    margin-bottom: 15px;
+
+    border-radius: 0.5rem;
+    border: none;
+
+    background-color: var(--success);
+    color: var(--white);
+
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1800px) {
+    main {
+        height: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .grid-container1{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 1.5rem;
+    }
+    
+    .grid-container2{
+        margin-top: 1.5rem;
+    
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 460px) {
+    .upload i {
+        display: none;
+    }
+    
+    .upload h5 {
+        display: none;
+    
+    }
+    
+    .upload span {
+        display: none;
+    }
+
+    .upload button {
+        margin: 15px 0;
+
+    }
+
+    .button-container button {
+       width: 100%;
+    }
+}

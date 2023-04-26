@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevolvaMe - Cadastro de objeto</title>
+
+    <!-- Link Css -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Link Css Global -->
+    <link rel="stylesheet" href="../../global/global.css">
+
+    <!-- Link FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <h3>DevolvaMe</h3>
+        <nav>
+            <a href="../Home/index.html">Home</a><span>|</span> 
+            <a href="../Listagem/index.html">Listagem</a><span>|</span> 
+            <a href="../Contato/index.html">Contato</a><span>|</span>
+            <a href="../Sobre/index.html">Sobre</a>
+        </nav>
+        <a href="../Login/index.html">
+            <button>
+                Login
+            </button>
+        </a>
+    </header>
+    <main>
+        <h1>Cadastro de objeto</h1>
+        <div class="list-container">
+            <div class="grid-container1">
+                <div class="input-group">
+                    <label for="nome">Nome do objeto:</label>
+                    <input type="text" name="nome" placeholder="Digite o nome...">
+                </div>
+                <div class="input-group">
+                    <label for="categoria">Categoria:</label>
+                    <select name="categoria" id="categoria" >
+                        <option value="garrafas">Garrafas</option>
+                        <option value="livros">Livros</option>
+                        <option value="celulares">Celulares</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="bloco">Bloco:</label>
+                    <select name="bloco" id="bloco">
+                        <option value="j">J</option>
+                        <option value="h">H</option>
+                        <option value="i">I</option>
+                        <option value="l">L</option>
+                        <option value="a">A</option>
+                    </select>
+                </div>
+            </div>
+            <div class="grid-container2">
+                <div class="input-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea style="resize: none;" name="descricao" id="" cols="30" rows="6" placeholder="Conte-nos como encontrou o objeto... "></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="data">Data:</label>
+                    <input type="date" name="data" placeholder="dd/mm/yyyy">
+                </div>
+            </div>
+
+            <div class="upload-container">
+                <h4>Imagens:</h4>
+                <div class="upload">
+                    <i class="fa-solid fa-folder-closed"></i>
+                    <h5>Arraste e solte seus arquivos aqui!</h5>
+
+                    <span>OU</span>
+
+                    <button type="button">
+                        Escolher arquivo
+                    </button>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <button type="button">
+                    Cadastrar
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FontAwesome link -->
+    <script src="https://kit.fontawesome.com/9c2ad3cd0d.js" crossorigin="anonymous"></script>
+    <!-- Script Js -->
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -105,7 +105,7 @@ Utilizaremos as técnologias HTML5, CSS3 e JavaScript para construir nosso siste
 
 Todas as páginas se comunicam entre si, com excessão do cadastro que só pode ser acessado a partir do login.
 
-> ![Diagrama de Navegação Simplificado - Frame 2](https://miro.com/app/board/uXjVPKCJAkU=/?share_link_id=430505762990)
+[Diagrama de Navegação Simplificado - Frame 2](https://miro.com/app/board/uXjVPKCJAkU=/?share_link_id=430505762990)
 
 # Conclusões
 

@@ -15,6 +15,16 @@ Nosso projeto consiste em um achado e perdidos virtual da PucMinas, onde usuario
 * Gabriel Barbosa da Fonseca
 * João Caram Santos de Oliveira
 
+## Sprint 1 (15 pontos)
+### Documentação
+- Folha de detalhamento do problema ➕➖
+- Persona(s) ❌
+- Histórias de usuários prioritárias (pelo menos 3) ✔️
+- Wireframes apresentados no vídeo. ❌
+
+### Observações sobre a apresentação 
+O conteúdo da apresentação foi bom. A equipe deve apenas ficar atenta para o fato de que, neste tipo de apresentação, vocês não estão apresentando o assunto (__design thinking__ ou __scrum__) e sim o produto de vocês. O foco deve estar aí.
+
 ## Quadro de tarefas
 A plataforma utilizada para controle de tarefas foi o Notion. 
 [Quadro de Tarefas](https://ajar-hemisphere-aff.notion.site/Controle-de-atividades-d5b5f891e66d4528824650274ef83fcf)

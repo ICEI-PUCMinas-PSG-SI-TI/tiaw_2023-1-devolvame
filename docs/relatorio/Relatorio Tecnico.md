@@ -67,7 +67,7 @@ No nosso projeto o usuário deverá fazer login para ter acesso a uma listagem d
 
 Lucas é um estudante universitário de 22 anos, cursando Ciência da Computação na PUC Minas. Ele é dedicado aos seus estudos e passa a maior parte do seu tempo livre trabalhando em projetos de programação e jogando videogame. Ele é uma pessoa introvertida e prefere passar o tempo sozinho ou com amigos próximos. Ele é muito organizado e gosta de planejar seus dias e semanas com antecedência para garantir que possa concluir todas as suas tarefas de maneira eficiente. Seu sonho é se formar na faculdade com boas notas e conseguir um emprego na indústria de tecnologia, onde possa usar suas habilidades para fazer um impacto positivo.
 
-
+João Gomes, 23 anos de idade, Contador Autônomo. Mora em Guarulhos, São Paulo. Solteiro e não tem filhos, gosta de fazer viagens de longa duração. Recém formado em Ciências Contábeis, está sempre atento as redes sociais, acompanhando notícias do dia a dia. Tem personalidade marcante, é individualista e gosta de realizar as obrigações de forma impecável. Sonha em expandir seus conhecimentos na área para assim aumentar seu número de clientes, e consequentemente conquistar um cargo em uma grande empresa.
 
 ## Histórias de Usuários
 

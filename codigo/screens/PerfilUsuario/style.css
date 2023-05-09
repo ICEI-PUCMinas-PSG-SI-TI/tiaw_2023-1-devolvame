@@ -217,6 +217,22 @@ main h1 {
 
 }
 
+/* botao deletar */
+
+#deletar{
+    float: right;
+}
+
+/* sair */
+
+.icone-container .icone a{
+color: red;
+font-weight:bold;
+}
+
+
+
+
 @media (max-width: 1024px) {
     .icone-container {
         width: 20%;

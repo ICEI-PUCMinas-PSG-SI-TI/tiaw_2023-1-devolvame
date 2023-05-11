@@ -72,7 +72,7 @@ header a button:hover {
 main {
     margin: 3rem 2.5rem;
 
-    height: 90vh;
+    height: auto;
 }
 
 main .top-row {
@@ -124,6 +124,121 @@ main .top-row .button-group button.add-button {
     -webkit-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* FILTER CONTAINER */
+
+.filter-container {
+    width: 100%;
+
+    margin-top: 1rem;
+    padding: 1.5rem;
+
+    border-radius: 0.5rem;
+    background-color: var(--white);
+
+    display: none;
+    gap: 2rem;
+
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+}
+
+.filter-container .input-group {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-container .input-group label {
+    margin-bottom: 5px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    color: var(--primary);
+}
+
+.input-icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-radius: 0.5rem;
+
+    border: 1px solid var(--primary_light);
+}
+
+.filter-container .input-group input {
+    flex: 1;
+
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+
+    color: var(--primary_light);
+
+    font-size: 0.8rem;
+    
+    border: none;
+    outline: none;
+}
+
+.filter-container .input-group i {
+    margin-right: 0.8rem;
+    font-size: 0.95rem;
+
+    color: var(--primary_light);
+}
+
+.filter-container .input-group select {
+    flex: 1;
+
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+
+    color: var(--primary_light);
+
+    font-size: 0.8rem;
+    
+    border: 1px solid var(--primary_light);
+}
+
+.filter-container .search-button {
+    height: 3rem;
+
+    align-self: flex-end;
+
+    padding: 0.7rem 3rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.filter-container .search-button i{
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 765px) {
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .filter-container .input-group select {
+        padding: 0.8rem;
+    }
+
+    .filter-container .search-button {
+        width: 100%;
+    }
 }
 
 .list-container {
@@ -306,9 +421,21 @@ main .top-row .button-group button.add-button {
 }
 
 @media (max-width: 425px) {
+    main {
+        margin: 3rem 1.5rem;
+    }
+
     main .top-row .button-group {
         width: 100%;
 
         flex-direction: column;
+    }
+
+    main .top-row .button-group button.filter-button {
+       width: 100%;
+    }
+    
+    main .top-row .button-group button.add-button {
+        width: 100%;
     }
 }

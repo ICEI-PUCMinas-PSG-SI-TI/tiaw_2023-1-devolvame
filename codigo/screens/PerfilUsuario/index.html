@@ -2,20 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevolvaMe - Contato</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevolvaMe - Meu perfil</title>
 
     <!-- Link Css -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
 
     <!-- Link Css Global -->
-    <link rel="stylesheet" href="../../global/global.css">
+    <link rel="stylesheet" href="../../global/global.css" />
 
     <!-- Link FontAwesome BABI -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-   
 </head>
 
 <body>
@@ -28,9 +27,7 @@
             <a href="../Sobre/index.html">Sobre</a>
         </nav>
         <a href="../Login/index.html">
-            <button>
-                Login
-            </button>
+            <button>Login</button>
         </a>
     </header>
 
@@ -39,73 +36,74 @@
     <main>
         <h1>Meu Perfil</h1>
 
-         
-   <!--PARTE DO ICONE-->
         <div class="geral">
-           
-            <div class="icone">
-                <i class="fas fa-map-marker-alt icon"></i> 
-                <h2>Alterar foto</h2>
-                
+            <!--PARTE DO ICONE-->
+
+            <div class="icone-container">
+                <div class="icone">
+                    <div class="circle">
+                        <i class="fas fa-user icon"></i>
+                    </div>
+
+                    <h2>Alterar foto</h2>
+                    
+                    <a href="../Home/index.html">sair</a>
+
+                </div>
             </div>
 
-    <!--PARTE DOS DADOS-->
+            <!--PARTE DOS DADOS-->
             <div class="dadosgeral">
+
                 <h3>Alterar dados</h3>
 
-                <div class="alterar">
-
-                    <div class="dados1">
+                <div class="grid-container1">
+                    <div class="dados">
                         <label for="pesquisa">Nome:</label>
-                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"
-                            placeholder="Digite seu nome...">
+                        <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite seu nome..." />
                     </div>
                     <div class="dados">
                         <label for="pesquisa">Telefone:</label>
-                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"
-                            placeholder="Digite seu telefone...">
+                        <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite seu telefone..." />
                     </div>
+                </div>
+                <div class="grid-container2">
                     <div class="dados">
                         <label for="pesquisa">Email:</label>
-                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"
-                            placeholder="Digite seu email...">
+                        <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite seu email..." />
                     </div>
+
                     <div class="dados">
                         <label for="pesquisa">Matricula:</label>
-                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"
-                            placeholder="Digite sua matricula...">
+                        <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite sua matricula..." />
                     </div>
                     <div class="dados">
                         <label for="pesquisa">Cod Pessoa:</label>
-                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"
-                            placeholder="Digite seu código de pessoa...">
+                        <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite seu código de pessoa..." />
                     </div>
-                    <div class="dados2">
+                </div>
+                <div class="grid-container3">
+                    <div class="dados">
                         <label for="pesquisa">Senha antiga:</label>
-                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"
-                            placeholder="Digite sua senha antiga...">
+                        <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite sua senha antiga..." />
                     </div>
                     <div class="dados">
                         <label for="pesquisa">Nova senha:</label>
-                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"
-                            placeholder="Digite sua nova senha...">
-                    </div>
+                        <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite sua nova senha..." />
 
-                    <button type="submit">Alterar</button>
-                    
+                    </div>
                 </div>
 
+                <button type="submit">Alterar</button>
 
-               
-                
+                <button id="deletar" type="submit">Deletar</button>
+
             </div>
 
         </div>
-
     </main>
     <!-- Script Js -->
     <script src="./script.js"></script>
-
 </body>
 
 </html>

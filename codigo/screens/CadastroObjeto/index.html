@@ -36,7 +36,7 @@
             <div class="grid-container1">
                 <div class="input-group">
                     <label for="nome">Nome do objeto:</label>
-                    <input type="text" name="nome" placeholder="Digite o nome...">
+                    <input id="nomeObjeto" type="text" name="nome" placeholder="Digite o nome...">
                 </div>
                 <div class="input-group">
                     <label for="categoria">Categoria:</label>
@@ -60,11 +60,11 @@
             <div class="grid-container2">
                 <div class="input-group">
                     <label for="descricao">Descrição:</label>
-                    <textarea style="resize: none;" name="descricao" id="" cols="30" rows="6" placeholder="Conte-nos como encontrou o objeto... "></textarea>
+                    <textarea style="resize: none;" name="descricao" id="descricao" cols="30" rows="6" placeholder="Conte-nos como encontrou o objeto... "></textarea>
                 </div>
                 <div class="input-group">
                     <label for="data">Data:</label>
-                    <input type="date" name="data" placeholder="dd/mm/yyyy">
+                    <input type="date" name="data" id="data" placeholder="dd/mm/yyyy">
                 </div>
             </div>
 
@@ -83,7 +83,7 @@
             </div>
             
             <div class="button-container">
-                <button type="button">
+                <button type="button" onclick="cadastrar()">
                     Cadastrar
                     <i class="fa-solid fa-plus"></i>
                 </button>

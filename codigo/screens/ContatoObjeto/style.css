@@ -241,40 +241,32 @@ main .top-row .button-group button.add-button {
     }
 }
 
-.list-container {
-    flex: 1;
+.container {
 
     margin-top: 25px;
-    padding: 1.5rem;
+    padding: 1rem;
 
     border-radius: 0.5rem;
     background-color: var(--white);
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem;
+  
 }
 
 .object-card {
     position: relative;
 
     flex: 1;
-    height: 180px;
 
     display: flex;
 
-    border: 1px solid;
-    border-color: var(--primary_light);
-    border-radius: 0.5rem;
 }
 
 .object-card .image-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
 
     width: 30%;
-    height: 100%;
+    height: 300px
 }
 
 .object-card .image-container img {
@@ -296,13 +288,14 @@ main .top-row .button-group button.add-button {
 }
 
 .object-card .details .title-container h3 {
-    font-size: 1.4rem;
+    font-size: 3rem;
     color: var(--primary);
 }
 
 .object-card .details .title-container span {
-    font-size: 0.8rem;
-    color: var(--primary_light);
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: bold;
 }
 
 .object-card .details .info {
@@ -350,6 +343,13 @@ main .top-row .button-group button.add-button {
 .object-card .details button i {
     margin-left: 5px;
 }
+
+.object-card .contato-info{
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.object-card .contato-info span{ padding-right: 1rem}
 
 @media (max-width: 1020px) {
     main {

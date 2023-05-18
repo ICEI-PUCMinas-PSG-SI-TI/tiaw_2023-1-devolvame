@@ -29,55 +29,10 @@
     </header>
     <main>
         <div class="top-row">
-            <h1>Listagem</h1>
-            <div class="button-group">
-                <button class="filter-button">
-                    Filtros
-                    <i class="fa-solid fa-filter"></i>
-                </button>
-                <a href="../CadastroObjeto/index.html">
-                    <button class="add-button">
-                        Achei ou perdi um objeto
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                </a>
-            </div>
+            <h1>Contato do Objeto</h1>
         </div>
 
-        <!-- CONTAINER DE FILTRO -->
-        <div class="filter-container">
-            <div class="input-group">
-                <label for="busca">Busca:</label>
-                <div class="input-icon-container">
-                    <input type="text" placeholder="Digite sua busca..." />
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </div>
-            <div class="input-group">
-                <label for="categoria">Categoria:</label>
-                <select name="categoria" id="categoria">
-                    <option value="garrafas">Garrafas</option>
-                    <option value="livros">Livros</option>
-                    <option value="celulares">Celulares</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label for="bloco">Bloco:</label>
-                <select name="bloco" id="bloco">
-                    <option value="j">J</option>
-                    <option value="h">H</option>
-                    <option value="i">I</option>
-                    <option value="l">L</option>
-                    <option value="a">A</option>
-                    <option value="b">B</option>
-                </select>
-            </div>
-            <button class="search-button">
-                Buscar <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </div>
-
-        <div class="list-container">
+        <div class="container">
             <div class="object-card">
                 <div class="image-container">
                     <img src="https://images.tcdn.com.br/img/img_prod/548537/garrafa_termica_flip_straw_stanley_651ml_lagoon_18209_1_defa16f920ee19d390a80cf7ae7d042b_20230301162446.jpg"
@@ -108,11 +63,17 @@
                             </div>
                             <span>02/03/23 - 15:30h</span>
                         </div>
+
                     </div>
 
-                    <button>
-                        Contato <i class="fa-solid fa-phone"></i>
-                    </button>
+                    <div class="contato-info">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Telefone: (99) 999999-9999</span>
+
+                        <i class="fa-solid fa-envelope"></i>
+                        <span> Email: usuario@gmail.com </span>
+                    </div>
+
                 </div>
             </div>
         </div>

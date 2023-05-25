@@ -19,16 +19,26 @@ if (!localStorage.length) {
 
 /* API (CRUD) objetos */
 function cadastrarObjeto(objeto) { }
+
 function listarObjetos() { }
+
 function listarObjeto(id) { }
+
 function filtrarObjetos(filtro) { }
+
 function atualizarObjeto(id) { }
+
 function excluirObjeto(id) { }
 
 /* API (CRUD) usuários */
 function cadastrarUsuario(usuario) { }
+
 function listarUsuario(id) { }
+
 function listarUsuarios() { }
+
 function atualizarUsuario(id) { }
+
 function excluirUsuario(id) { }
+
 function loginUsuario(usuario) { }

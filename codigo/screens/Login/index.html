@@ -53,34 +53,35 @@
     </main>
 
     <!-- Script Js -->
+    <script src="../../global/script.js"></script>
     <script src="./script.js"></script>
     <script>
         function validarLogin(usuario, senha) {
-          // 
-          const usuariosValidos = ['joao', 'bizzi', 'babi', 'danilo', 'rodrigo', 'usuario6', 'usuario7', 'usuario8', 'usuario9', 'usuario10'];
-          const senhaValida = '123';
-          return usuariosValidos.includes(usuario) && senha === senhaValida;
+            // 
+            const usuariosValidos = ['joao', 'bizzi', 'babi', 'danilo', 'rodrigo', 'usuario6', 'usuario7', 'usuario8', 'usuario9', 'usuario10'];
+            const senhaValida = '123';
+            return usuariosValidos.includes(usuario) && senha === senhaValida;
         }
-        
+
         const form = document.querySelector('form');
-        form.addEventListener('submit', function(event) {
-          event.preventDefault();
-        
-          const usuario = document.querySelector('input[name="user"]').value;
-          const senha = document.querySelector('input[name="password"]').value;
-        
-          if (validarLogin(usuario, senha)) {
-            alert("Login válido");
-            window.location.href="../listagem/index.html"
-            
-            
-          } else {
-            alert("Login inválido");
-           
-          }
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const usuario = document.querySelector('input[name="user"]').value;
+            const senha = document.querySelector('input[name="password"]').value;
+
+            if (validarLogin(usuario, senha)) {
+                alert("Login válido");
+                window.location.href = "../listagem/index.html"
+
+
+            } else {
+                alert("Login inválido");
+
+            }
         });
-        </script>
-    
+    </script>
+
 
     <!-- Font Awesome  -->
     <script src="https://kit.fontawesome.com/f5419ab9d1.js" crossorigin="anonymous"></script>

@@ -1,44 +1,47 @@
-const filterButton = document.querySelector(".filter-button");
-const filterContainer = document.querySelector(".filter-container");
-const contatoButton = document.getElementsByClassName("contato-button");
+const filterButton = document.querySelector('.filter-button')
+const filterContainer = document.querySelector('.filter-container')
+const contatoButton = document.getElementsByClassName('contato-button')
 
-const objectsContainer = document.querySelector(".list-container");
+const objectsContainer = document.querySelector('.list-container')
 
 function handleOpenFilterContainer(e) {
-  if (filterContainer.style.display === "none" || !filterContainer.style.display) {
-    filterContainer.style.display = "flex";
-  } else {
-    filterContainer.style.display = "none";
-  }
+    if (
+        filterContainer.style.display === 'none' ||
+        !filterContainer.style.display
+    ) {
+        filterContainer.style.display = 'flex'
+    } else {
+        filterContainer.style.display = 'none'
+    }
 }
 
-function handleClickContatoButton(e) {
-  window.location.href = "../ContatoObjeto/index.html"
+function handleClickContatoButton() {
+    window.location.href = '../ContatoObjeto/index.html'
 }
 
-filterButton.addEventListener("click", handleOpenFilterContainer)
+filterButton.addEventListener('click', handleOpenFilterContainer)
 
-// adiciona o evento e click em todos os botoes
-for (let i = 0; i < contatoButton.length; i++) {
-  contatoButton[i].addEventListener("click", handleClickContatoButton)
-}
+async function handleListObjetos() {
+    const objects = JSON.parse(localStorage.getItem('objeto'))
 
-async function handleListObjetos(){
-  const objects = JSON.parse(localStorage.getItem("objeto"))
+    if (!objects) {
+        let emptyListHtml = `<div class="empty-list-container">
+                                <i class="fa-solid fa-handshake-slash"></i>
+                                <h3>Sem objetos cadastrados!</h3>
+                            </div>`
 
-  if(!objects){
-    // adicionar a tela de lista vazia
+        objectsContainer.innerHTML += emptyListHtml
 
-    return
-  }
+        return
+    }
 
-  let objetosHTML = "";
+    let objetosHTML = ''
 
-  objects.forEach(objeto => {
-    let objetoCard = `<div class="object-card">
+    objects.forEach((objeto) => {
+        let objetoCard = `<div class="object-card">
                         <div class="image-container">
-                            <img src="https://images.tcdn.com.br/img/img_prod/548537/garrafa_termica_flip_straw_stanley_651ml_lagoon_18209_1_defa16f920ee19d390a80cf7ae7d042b_20230301162446.jpg"
-                                alt="" />
+                            <img src=${objeto.imagem ?? "../../imagens/sem-foto.gif"}
+                                alt="Imagem do objeto" />
                         </div>
                         <div class="details">
                             <div class="title-container">
@@ -57,7 +60,7 @@ async function handleListObjetos(){
                                     <div class="icon-container">
                                         <i class="fa-solid fa-location-dot"></i>
                                     </div>
-                                    <span>Bloco ${objeto.bloco} - Sala 101</span>
+                                    <span>Bloco ${objeto.bloco} - ${objeto.sala}</span>
                                 </div>
                                 <div class="row">
                                     <div class="icon-container">
@@ -67,19 +70,19 @@ async function handleListObjetos(){
                                 </div>
                             </div>
 
-                            <button class="contato-button">
+                            <button onclick="handleClickContatoButton()" class="contato-button">
                                 Contato <i class="fa-solid fa-phone"></i>
                             </button>
                         </div>
                     </div>`
 
-          objetosHTML += objetoCard;
-  });
+        objetosHTML += objetoCard
+    })
 
-  objectsContainer.innerHTML += objetosHTML;
-
+    objectsContainer.innerHTML += objetosHTML
 }
 
+
 window.onload = () => {
-  handleListObjetos()
+    handleListObjetos()
 }

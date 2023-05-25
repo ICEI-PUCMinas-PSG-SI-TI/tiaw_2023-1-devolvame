@@ -2,9 +2,9 @@ var objeto = []
 var usuarios = []
 
 /* cadastra admins caso localStorage vazio */
-usuarios = JSON.parse(localStorage.getItem("usuarios"))
-if (!usuarios) {
+usuarios = JSON.parse(localStorage.getItem("usuarios"));
 
+if (!usuarios) {
     let admins = [
         { username: 'daniloloose', password: 'admin' },
         { username: 'barbaragiovana', password: 'admin' },
@@ -13,12 +13,44 @@ if (!usuarios) {
         { username: 'miguelbizzi', password: 'admin' }
     ]
 
-    usuarios = []
+    usuarios = [];
+
     admins.forEach(admin => {
         usuarios.push(admin)
     })
 
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
+}
+
+// Cadastro de objetos inicial
+
+const objetos = JSON.parse(localStorage.getItem("objeto"))
+
+if(!objetos){
+    let new_objetos = [
+        {
+            id: Math.floor(Date.now() * Math.random()).toString(36),
+            bloco: "J",
+            categoria: "Garrafas",
+            data: "2023/03/12",
+            descricao: "Encontrei essa garrafa na sala 101 do bloco J",
+            nome: "Garrafa d'agua",
+            sala: "Sala 101",
+            imagem: "https://images.tcdn.com.br/img/img_prod/548537/garrafa_termica_flip_straw_stanley_651ml_lagoon_18209_1_defa16f920ee19d390a80cf7ae7d042b_20230301162446.jpg"
+        },
+        {
+            id: Math.floor(Date.now() * Math.random()).toString(36),
+            bloco: "B",
+            categoria: "Vestimentas",
+            data: "2023/04/02",
+            descricao: "Encontrei esse bone na sala 201 do bloco H",
+            nome: "Boné da nike",
+            sala: "Sala 201",
+            imagem: "https://static.netshoes.com.br/produtos/bone-nike-sportswear-h86-futura-washed-aba-curva/26/D12-9796-026/D12-9796-026_zoom1.jpg?ts=1630602306"
+        }
+    ]
+
+    localStorage.setItem("objeto", JSON.stringify(new_objetos));
 }
 
 /* API (CRUD) objetos */

@@ -255,6 +255,28 @@ main .top-row .button-group button.add-button {
     grid-gap: 1.5rem;
 }
 
+.empty-list-container {
+    display: flex;
+
+    gap: 0.3rem;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-list-container i{
+    font-size: 1.95rem;
+
+    color: var(--primary_light);
+}
+
+.empty-list-container h3{
+    font-size: 1.2rem;
+    color: var(--primary_light);
+}
+
+
 .object-card {
     position: relative;
 
@@ -438,4 +460,10 @@ main .top-row .button-group button.add-button {
     main .top-row .button-group button.add-button {
         width: 100%;
     }
+    
+    .empty-list-container h3{
+        font-size: 1.1rem;
+        color: var(--primary_light);
+    }
+    
 }

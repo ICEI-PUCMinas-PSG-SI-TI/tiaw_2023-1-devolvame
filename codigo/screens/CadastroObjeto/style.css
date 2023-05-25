@@ -116,7 +116,7 @@ main h1 {
     margin-top: 1.5rem;
 
     display: grid;
-    grid-template-columns: 60% auto;
+    grid-template-columns:  auto auto 60%;
     grid-gap: 1.5rem;
 }
 
@@ -242,6 +242,12 @@ main h1 {
 @media (max-width: 1800px) {
     main {
         height: 100%;
+    }
+}
+
+@media (max-width: 1010px) {
+    .grid-container2 {
+        grid-template-columns:  auto;
     }
 }
 

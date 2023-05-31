@@ -1,77 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DevolvaMe - Login</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevolvaMe - Login</title>
+        <!-- Link Css -->
+        <link rel="stylesheet" href="./style.css" />
 
-    <!-- Link Css -->
-    <link rel="stylesheet" href="./style.css">
+        <!-- Link Css Global -->
+        <link rel="stylesheet" href="../../global/global.css" />
+    </head>
 
-    <!-- Link Css Global -->
-    <link rel="stylesheet" href="../../global/global.css">
-</head>
+    <body>
+        <header>
+            <h3>DevolvaMe</h3>
+            <nav>
+                <a href="../Home/index.html">Home</a><span>|</span>
+                <a href="../Contato/index.html">Contato</a><span>|</span>
+                <a href="../Sobre/index.html">Sobre</a>
+            </nav>
+            <a href="../Login/index.html">
+                <button>Login</button>
+            </a>
+        </header>
 
-<body>
-    <header>
-        <h3>DevolvaMe</h3>
-        <nav>
-            <a href="../Home/index.html">Home</a><span>|</span>
-            <a href="../Listagem/index.html">Listagem</a><span>|</span>
-            <a href="../Contato/index.html">Contato</a><span>|</span>
-            <a href="../Sobre/index.html">Sobre</a>
-        </nav>
-        <a href="../Login/index.html">
-            <button>
-                Login
-            </button>
-        </a>
-    </header>
-
-    <main>
-        <form>
-            <h3>Cadastro</h3>
-            <label for="user">Usuário: </label>
-            <div class="flex">
-                <div class="icon">
-                    <i class="fa-solid fa-user icon"></i>
+        <main>
+            <form>
+                <h3>Cadastro</h3>
+                <label for="user">Usuário: </label>
+                <div class="flex">
+                    <div class="icon">
+                        <i class="fa-solid fa-user icon"></i>
+                    </div>
+                    <input
+                        type="text"
+                        id="user"
+                        name="user"
+                        placeholder="Digite seu usuário..."
+                    />
                 </div>
-                <input type="text" id="user" name="user" placeholder="Digite seu usuário...">
-            </div>
-            <label for="email">Email: </label>
-            <div class="flex">
-                <div id="email-box" class="icon">
-                    <i class="fa-solid fa-envelope"></i>
+                <label for="email">Email: </label>
+                <div class="flex">
+                    <div id="email-box" class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Digite seu email..."
+                    />
                 </div>
-                <input id="email" type="email" name="email" placeholder="Digite seu email...">
-            </div>
-            <label for="password">Senha: </label>
-            <div class="flex">
-                <div class="icon">
-                    <i class="fa-solid fa-lock icon"></i>
+                <label for="password">Senha: </label>
+                <div class="flex">
+                    <div class="icon">
+                        <i class="fa-solid fa-lock icon"></i>
+                    </div>
+                    <input
+                        id="password"
+                        type="password"
+                        name="password"
+                        placeholder="Digite sua senha..."
+                    />
                 </div>
-                <input id="password" type="password" name="password" placeholder="Digite sua senha...">
-            </div>
-            <label for="passwordConfirm">Confirme a Senha: </label>
-            <div class="flex">
-                <div class="icon">
-                    <i class="fa-solid fa-lock icon"></i>
+                <label for="passwordConfirm">Confirme a Senha: </label>
+                <div class="flex">
+                    <div class="icon">
+                        <i class="fa-solid fa-lock icon"></i>
+                    </div>
+                    <input
+                        id="passwordConfirm"
+                        type="password"
+                        name="passwordConfirm"
+                        placeholder="Confirme sua senha..."
+                    />
                 </div>
-                <input id="passwordConfirm" type="password" name="passwordConfirm" placeholder="Confirme sua senha...">
-            </div>
-            <button> Entrar </button>
-            <p class="text-details"> Possui uma conta? <a href="../Login/index.html"> Entre </a></p>
-        </form>
-    </main>
+                <button>Entrar</button>
+                <p class="text-details">
+                    Possui uma conta? <a href="../Login/index.html"> Entre </a>
+                </p>
+            </form>
+        </main>
 
-    <!-- Script Js -->
-    <script src="../../global/script.js"></script>
-    <script src="./script.js"></script>
+        <!-- Script Js -->
+        <script src="../../global/script.js"></script>
+        <script src="./script.js"></script>
 
-    <!-- Font Awesome  -->
-    <script src="https://kit.fontawesome.com/f5419ab9d1.js" crossorigin="anonymous"></script>
-</body>
-
+        <!-- Font Awesome  -->
+        <script
+            src="https://kit.fontawesome.com/f5419ab9d1.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>

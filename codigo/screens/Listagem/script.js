@@ -15,13 +15,13 @@ function handleOpenFilterContainer(e) {
     }
 }
 
-function handleClickContatoButton() {
-    window.location.href = '../ContatoObjeto/index.html'
+function handleClickContatoButton(id) {
+    window.location.href = '../ContatoObjeto/index.html?id=' + id
 }
 
 filterButton.addEventListener('click', handleOpenFilterContainer)
 
-async function handleListObjetos() {
+function handleListObjetos() {
     const objects = JSON.parse(localStorage.getItem('objeto'))
 
     if (!objects) {
@@ -40,7 +40,9 @@ async function handleListObjetos() {
     objects.forEach((objeto) => {
         let objetoCard = `<div class="object-card">
                         <div class="image-container">
-                            <img src=${objeto.imagem ?? "../../imagens/sem-foto.gif"}
+                            <img src=${
+                                objeto.imagem ?? '../../imagens/sem-foto.gif'
+                            }
                                 alt="Imagem do objeto" />
                         </div>
                         <div class="details">
@@ -60,7 +62,9 @@ async function handleListObjetos() {
                                     <div class="icon-container">
                                         <i class="fa-solid fa-location-dot"></i>
                                     </div>
-                                    <span>Bloco ${objeto.bloco} - ${objeto.sala}</span>
+                                    <span>Bloco ${objeto.bloco} - ${
+            objeto.sala
+        }</span>
                                 </div>
                                 <div class="row">
                                     <div class="icon-container">
@@ -70,18 +74,18 @@ async function handleListObjetos() {
                                 </div>
                             </div>
 
-                            <button onclick="handleClickContatoButton()" class="contato-button">
+                            <button onclick="handleClickContatoButton(${
+                                objeto.id
+                            })" class="contato-button">
                                 Contato <i class="fa-solid fa-phone"></i>
                             </button>
                         </div>
                     </div>`
-
         objetosHTML += objetoCard
     })
 
     objectsContainer.innerHTML += objetosHTML
 }
-
 
 window.onload = () => {
     handleListObjetos()

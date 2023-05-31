@@ -28,7 +28,7 @@ const objetos = JSON.parse(localStorage.getItem('objeto'))
 if (!objetos) {
     let new_objetos = [
         {
-            id: Math.floor(Date.now() * Math.random()).toString(36),
+            id: 1,
             bloco: 'J',
             categoria: 'Garrafas',
             data: '2023/03/12',
@@ -38,7 +38,7 @@ if (!objetos) {
             imagem: 'https://images.tcdn.com.br/img/img_prod/548537/garrafa_termica_flip_straw_stanley_651ml_lagoon_18209_1_defa16f920ee19d390a80cf7ae7d042b_20230301162446.jpg',
         },
         {
-            id: Math.floor(Date.now() * Math.random()).toString(36),
+            id: 2,
             bloco: 'B',
             categoria: 'Vestimentas',
             data: '2023/04/02',
@@ -49,6 +49,7 @@ if (!objetos) {
         },
     ]
 
+    localStorage.setItem('objetoId', 3)
     localStorage.setItem('objeto', JSON.stringify(new_objetos))
 }
 

@@ -30,7 +30,7 @@ if (!objetos) {
         {
             id: 1,
             bloco: 'J',
-            categoria: 'Garrafas',
+            categoria: 'garrafas',
             data: '2023/03/12',
             descricao: 'Encontrei essa garrafa na sala 101 do bloco J',
             nome: "Garrafa d'agua",
@@ -40,7 +40,7 @@ if (!objetos) {
         {
             id: 2,
             bloco: 'B',
-            categoria: 'Vestimentas',
+            categoria: 'vestimentas',
             data: '2023/04/02',
             descricao: 'Encontrei esse bone na sala 201 do bloco H',
             nome: 'Boné da nike',

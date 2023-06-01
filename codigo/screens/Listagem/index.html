@@ -48,7 +48,7 @@
                 <div class="input-group">
                     <label for="busca">Busca:</label>
                     <div class="input-icon-container">
-                        <input type="text" placeholder="Digite sua busca..." />
+                        <input type="text" id="minhabusca" placeholder="Digite sua busca..." />
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                         <option value="b">B</option>
                     </select>
                 </div>
-                <button class="search-button">
+                <button onClick="filtrar()" class="search-button">
                     Buscar <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>

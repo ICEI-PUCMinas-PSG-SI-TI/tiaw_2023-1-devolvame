@@ -1,97 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>DevolvaMe - Login</title>
 
-        <!-- Link Css -->
-        <link rel="stylesheet" href="./style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevolvaMe - Login</title>
 
-        <!-- Link Css Global -->
-        <link rel="stylesheet" href="../../global/global.css" />
-    </head>
+    <!-- Link Css -->
+    <link rel="stylesheet" href="./style.css" />
 
-    <body>
-        <header>
-            <h3>DevolvaMe</h3>
-            <nav>
-                <a href="../Home/index.html">Home</a><span>|</span>
-                <a href="../Contato/index.html">Contato</a><span>|</span>
-                <a href="../Sobre/index.html">Sobre</a>
-            </nav>
-            <a href="../Login/index.html">
-                <button>Login</button>
-            </a>
-        </header>
+    <!-- Link Css Global -->
+    <link rel="stylesheet" href="../../global/global.css" />
+</head>
 
-        <main>
-            <form>
-                <h3>Cadastro</h3>
-                <label for="user">Usuário: </label>
+<body>
+    <header>
+        <h3>DevolvaMe</h3>
+        <nav>
+            <a href="../Home/index.html">Home</a><span>|</span>
+            <a href="../Contato/index.html">Contato</a><span>|</span>
+            <a href="../Sobre/index.html">Sobre</a>
+        </nav>
+        <a href="../Login/index.html">
+            <button>Login</button>
+        </a>
+    </header>
+
+    <main>
+        <form>
+            <h3>Cadastro</h3>
+            <label for="user">Usuário: </label>
+            <div class="input-group">
                 <div class="flex">
                     <div class="icon">
                         <i class="fa-solid fa-user icon"></i>
                     </div>
-                    <input
-                        type="text"
-                        id="user"
-                        name="user"
-                        placeholder="Digite seu usuário..."
-                    />
+                    <input required type="text" id="user" name="user" placeholder="Digite seu usuário..." />
                 </div>
+                <span class="mensagem-erro">Preencha o campo!</span>
+            </div>
+
+            <div class="input-group">
+                <label for="nome">Nome: </label>
+                <div class="flex">
+                    <div class="icon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <input required id="nome" type="text" name="nome" placeholder="Digite seu nome..." />
+                </div>
+                <span class="mensagem-erro">Preencha o campo!</span>
+            </div>
+
+            <div class="input-group">
                 <label for="email">Email: </label>
                 <div class="flex">
                     <div id="email-box" class="icon">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
-                    <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        placeholder="Digite seu email..."
-                    />
+                    <input required id="email" type="email" name="email" placeholder="Digite seu email..." />
                 </div>
+                <span class="mensagem-erro">Preencha o campo!</span>
+            </div>
+
+            <div class="input-group">
+                <label for="celular">Celular: </label>
+                <div class="flex">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <input required id="celular" type="tel" placeholder="(00) 00000-0000" name="celular" />
+                </div>
+                <span class="mensagem-erro">Preencha o campo!</span>
+            </div>
+
+            <div class="input-group">
                 <label for="password">Senha: </label>
                 <div class="flex">
                     <div class="icon">
                         <i class="fa-solid fa-lock icon"></i>
                     </div>
-                    <input
-                        id="password"
-                        type="password"
-                        name="password"
-                        placeholder="Digite sua senha..."
-                    />
+                    <input required id="password" type="password" name="password" placeholder="Digite sua senha..." />
                 </div>
+                <span class="mensagem-erro">Preencha o campo!</span>
+            </div>
+
+            <div class="input-group">
                 <label for="passwordConfirm">Confirme a Senha: </label>
                 <div class="flex">
                     <div class="icon">
                         <i class="fa-solid fa-lock icon"></i>
                     </div>
-                    <input
-                        id="passwordConfirm"
-                        type="password"
-                        name="passwordConfirm"
-                        placeholder="Confirme sua senha..."
-                    />
+                    <input required id="passwordConfirm" type="password" name="passwordConfirm"
+                        placeholder="Confirme sua senha..." />
                 </div>
-                <button>Entrar</button>
-                <p class="text-details">
-                    Possui uma conta? <a href="../Login/index.html"> Entre </a>
-                </p>
-            </form>
-        </main>
+                <span class="mensagem-erro">Preencha o campo!</span>
+            </div>
 
-        <!-- Script Js -->
-        <script src="../../global/script.js"></script>
-        <script src="./script.js"></script>
+            <button id="botao-cadastro">Entrar</button>
+            <p class="text-details">
+                Possui uma conta? <a href="../Login/index.html"> Entre </a>
+            </p>
+        </form>
+    </main>
 
-        <!-- Font Awesome  -->
-        <script
-            src="https://kit.fontawesome.com/f5419ab9d1.js"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <!-- Script Js -->
+    <script src="../../global/script.js"></script>
+    <script src="./script.js"></script>
+
+    <!-- Font Awesome  -->
+    <script src="https://kit.fontawesome.com/f5419ab9d1.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

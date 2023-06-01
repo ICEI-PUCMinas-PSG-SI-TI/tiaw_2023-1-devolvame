@@ -118,11 +118,23 @@ form h3 {
     margin-bottom: 1.8rem;
 }
 
+
+
+.mensagem-erro {
+    display: none;
+    color: red;
+    margin: -10px 0;
+    font-size: 0.7rem; 
+}
+
+.input-group{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
 .flex {
     display: flex;
     justify-content: start;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
     border: 0.1px solid var(--primary);
     border-radius: 0.5rem;
 }
@@ -131,7 +143,11 @@ form h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0.5rem;
+    width: 50px;
+}
+
+.campo-erro {
+    border: 1px solid red;
 }
 
 #email-box {
@@ -224,5 +240,6 @@ main .text-details a {
         width: 30%;
     }
 }
+
 
 /* FIM MAIN  */

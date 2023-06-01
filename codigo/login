@@ -1,0 +1,32 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("formulario");
+    const usernameInput = document.getElementById("usernameInput");
+    const passwordInput = document.getElementById("passwordInput");
+  
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      // Obter os valores dos campos do formulário
+      const username = usernameInput.value;
+      const password = passwordInput.value;
+  
+      // Verificar se os campos foram preenchidos
+      if (username === "" || password === "") {
+        alert("Por favor, preencha todos os campos!");
+        return;
+      }
+  
+      // Verificar se os dados de login estão corretos
+      const cadastro = JSON.parse(localStorage.getItem("cadastro"));
+      if (cadastro && cadastro.user === username && cadastro.password === password) {
+        // Login bem-sucedido
+        alert("Login realizado com sucesso!");
+  
+        // Redirecionar para a página home
+        window.location.href = "../Home/index.html";
+      } else {
+        // Login inválido
+        alert("Usuário ou senha incorretos!");
+      }
+    });
+  });

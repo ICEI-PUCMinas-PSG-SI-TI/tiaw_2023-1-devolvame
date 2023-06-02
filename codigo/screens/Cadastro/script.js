@@ -13,7 +13,6 @@ function validaCadastro(e) {
 
     const usuario = inputUsuario.value;
     const nome = inputNome.value;
-    console.log(nome)
     const email = inputEmail.value;
     const celular = inputCelular.value;
     const senha = inputSenha.value;
@@ -43,7 +42,37 @@ function validaCadastro(e) {
     }
 
     // codigo para cadastro de usuario vem aqui
-    console.log("sucesso")
+    let usuarioParaCadastro = {
+        usuario: usuario,
+        nome: nome,
+        email: email,
+        celular: celular,
+        senha: senha
+    }
+
+    console.log("validação com sucesso", usuarioParaCadastro)
+    cadastrar(usuarioParaCadastro);
+
+}
+
+function cadastrar(usuarioCadastro) {
+
+    if (usuarios.find(usuario => usuario.usuario === usuarioCadastro.usuario)) {
+        alert("Usuário já existe! Por favor, escolha um nome de usuário diferente.");
+        return;
+    }
+
+    if (usuarios.find(usuario => usuario.email === usuarioCadastro.email)) {
+        alert("Email já existe! Por favor, escolha um email diferente.");
+        return;
+    }
+
+    // Armazenar os dados de cadastro no LocalStorage
+    usuarios.push(usuarioCadastro);
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+    // Redirecionar para a página de login
+    window.location.href = "../Login/index.html";
 }
 
 // Mensagem de erro abaixo do input

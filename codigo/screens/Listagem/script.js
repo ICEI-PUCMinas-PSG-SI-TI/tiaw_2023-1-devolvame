@@ -165,6 +165,7 @@ function filtraPorOpcoes(categoriaSelecionada, blocoSelecionado, nomeBusca){
 }
 
 function filtrar() {
+    document.getElementById("btn-limpar").disabled=false
 
     const categoriaSelecionada = document.getElementById('categoria').value;
     const blocoSelecionado = document.getElementById('bloco').value;
@@ -175,4 +176,21 @@ function filtrar() {
     }else{
         filtraPorOpcoes(categoriaSelecionada, blocoSelecionado, nomeBusca);
     }   
+}
+
+//BABI - funcao limpar filtro
+
+function limparFiltro() {  
+    objectsContainer.innerHTML="";
+    document.getElementById("btn-limpar").disabled=true
+
+    handleListObjetos();
+    const categoriaSelecionada = document.getElementById('categoria');
+    const blocoSelecionado = document.getElementById('bloco');
+    const nomeBusca = document.getElementById('minhabusca');
+   
+    categoriaSelecionada.selectedIndex=0;
+    blocoSelecionado.selectedIndex=0;
+    nomeBusca.value='';
+    
 }

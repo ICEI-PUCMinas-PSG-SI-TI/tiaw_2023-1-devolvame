@@ -72,7 +72,7 @@ header a button:hover {
 main {
     margin: 3rem 2.5rem;
 
-    height: auto;
+    height: 80vh;
 }
 
 main .top-row {
@@ -180,7 +180,7 @@ main .top-row .button-group button.add-button {
     color: var(--primary_light);
 
     font-size: 0.8rem;
-    
+
     border: none;
     outline: none;
 }
@@ -201,7 +201,7 @@ main .top-row .button-group button.add-button {
     color: var(--primary_light);
 
     font-size: 0.8rem;
-    
+
     border: 1px solid var(--primary_light);
 }
 
@@ -223,7 +223,7 @@ main .top-row .button-group button.add-button {
     background-color: var(--primary);
 }
 
-.filter-container .search-button i{
+.filter-container .search-button i {
     margin-left: 0.5rem;
 }
 
@@ -242,14 +242,11 @@ main .top-row .button-group button.add-button {
 }
 
 .container {
-
     margin-top: 25px;
     padding: 1rem;
 
     border-radius: 0.5rem;
     background-color: var(--white);
-
-  
 }
 
 .object-card {
@@ -258,7 +255,6 @@ main .top-row .button-group button.add-button {
     flex: 1;
 
     display: flex;
-
 }
 
 .object-card .image-container {
@@ -266,7 +262,7 @@ main .top-row .button-group button.add-button {
     justify-content: left;
 
     width: 30%;
-    height: 300px
+    height: 300px;
 }
 
 .object-card .image-container img {
@@ -344,16 +340,18 @@ main .top-row .button-group button.add-button {
     margin-left: 5px;
 }
 
-.object-card .contato-info{
+.object-card .contato-info {
     color: var(--primary);
     font-weight: bold;
 }
 
-.object-card .contato-info span{ padding-right: 1rem}
+.object-card .contato-info span {
+    padding-right: 1rem;
+}
 
 @media (max-width: 1020px) {
     main {
-        height: auto;
+        height: 80vh;
     }
 
     .list-container {
@@ -432,9 +430,9 @@ main .top-row .button-group button.add-button {
     }
 
     main .top-row .button-group button.filter-button {
-       width: 100%;
+        width: 100%;
     }
-    
+
     main .top-row .button-group button.add-button {
         width: 100%;
     }

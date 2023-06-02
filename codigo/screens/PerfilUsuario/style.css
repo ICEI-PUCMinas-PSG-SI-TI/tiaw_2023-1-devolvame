@@ -12,7 +12,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 header h3 {
@@ -43,6 +42,8 @@ header nav span {
 }
 
 header a button {
+    opacity: 0;
+
     width: auto;
     padding: 0.6rem 1.3rem;
 
@@ -56,12 +57,12 @@ header a button {
     cursor: pointer;
     transition: 0.2s;
 
-    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
 }
 
-header a button:hover{
+header a button:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -72,15 +73,15 @@ header a button:hover{
         gap: 1.3rem;
     }
 
-    header nav a{
+    header nav a {
         font-size: 0.8rem;
     }
 
-    header a, header a button{
+    header a,
+    header a button {
         width: 100%;
         font-size: 0.8rem;
     }
-
 }
 
 /* FIM HEADER */
@@ -109,7 +110,6 @@ main h1 {
     color: var(--primary);
 }
 
-
 /*parte do icone de usuario*/
 
 .icone-container {
@@ -135,13 +135,12 @@ main h1 {
     justify-content: center;
 }
 
-.icone-container .circle i{
+.icone-container .circle i {
     color: var(--primary);
     font-size: 50px;
-       
 }
 
-.icone-container h2{
+.icone-container h2 {
     margin-top: 10px;
     font-size: 1.1rem;
 }
@@ -153,38 +152,38 @@ main h1 {
     flex: 1;
 }
 
-.dadosgeral h3{
+.dadosgeral h3 {
     font-size: 25px;
     margin-bottom: 10px;
 }
 
-.grid-container1{
+.grid-container1 {
     display: grid;
     grid-template-columns: 50% auto;
     grid-gap: 1.5rem;
 }
 
-.grid-container2{
+.grid-container2 {
     display: grid;
     grid-template-columns: 40% 25% auto;
     grid-gap: 1.5rem;
 }
 
-.grid-container3{
+.grid-container3 {
     display: grid;
     grid-template-columns: 50% auto;
     grid-gap: 1.5rem;
 }
 
-.dados{
+.dados {
     width: 100%;
     font-weight: bold;
 }
 
-.dados input{
+.dados input {
     border-radius: 5px;
     font-size: 0.9rem;
-    padding: 1rem; 
+    padding: 1rem;
     outline: none;
     border-width: 1px;
     border-color: var(--primary_light);
@@ -192,20 +191,45 @@ main h1 {
     width: 100%;
     margin-bottom: 10px;
     margin-top: 5px;
-    
 }
 
 /*botao alterar*/
 
-.geral .dadosgeral button{
-    background: linear-gradient(120deg, var(--secondary) 30%, var(--primary) 100%) repeat;
+.geral .dadosgeral button[type='submit'] {
+    margin-top: 5px;
+
+    background: linear-gradient(
+            120deg,
+            var(--secondary) 30%,
+            var(--primary) 100%
+        )
+        repeat;
     color: white;
 
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
 
-    font-size: 1.0rem;
+    font-size: 1rem;
+    font-weight: bold;
+
+    text-align: center;
+
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+/* botao deletar */
+
+#deletar {
+    margin-top: 5px;
+    color: white;
+
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    font-size: 1rem;
     font-weight: bold;
 
     text-align: center;
@@ -213,25 +237,16 @@ main h1 {
     padding: 10px 30px;
     transition: 0.5s;
 
-    align-items: right;
-
-}
-
-/* botao deletar */
-
-#deletar{
-    float: right;
+    background-color: red;
 }
 
 /* sair */
 
-.icone-container .icone a{
-color: red;
-font-weight:bold;
+.icone-container .icone a {
+    margin-top: 5px;
+    color: red;
+    font-weight: bold;
 }
-
-
-
 
 @media (max-width: 1024px) {
     .icone-container {
@@ -249,7 +264,6 @@ font-weight:bold;
     .icone-container {
         width: 100%;
     }
-
 }
 
 @media (max-width: 600px) {
@@ -258,16 +272,15 @@ font-weight:bold;
         height: 100%;
     }
 
-    .grid-container1 , .grid-container2, .grid-container3{
+    .grid-container1,
+    .grid-container2,
+    .grid-container3 {
         grid-template-columns: 1fr;
         gap: 5px;
         margin-bottom: 5px;
     }
 
-    .geral .dadosgeral button{
+    .geral .dadosgeral button {
         width: 100%;
     }
 }
-
-
-

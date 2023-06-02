@@ -1,90 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DevolvaMe - Login</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevolvaMe - Login</title>
+        <!-- Link Css -->
+        <link rel="stylesheet" href="./style.css" />
 
-    <!-- Link Css -->
-    <link rel="stylesheet" href="./style.css">
+        <!-- Link Css Global -->
+        <link rel="stylesheet" href="../../global/global.css" />
+    </head>
 
-    <!-- Link Css Global -->
-    <link rel="stylesheet" href="../../global/global.css">
-</head>
+    <body>
+        <header>
+            <h3>DevolvaMe</h3>
+            <nav>
+                <a href="../Home/index.html">Home</a><span>|</span>
+                <a href="../Contato/index.html">Contato</a><span>|</span>
+                <a href="../Sobre/index.html">Sobre</a>
+            </nav>
+            <a href="../Login/index.html">
+                <button>Login</button>
+            </a>
+        </header>
 
-<body>
-    <header>
-        <h3>DevolvaMe</h3>
-        <nav>
-            <a href="../Home/index.html">Home</a><span>|</span>
-            <a href="../Listagem/index.html">Listagem</a><span>|</span>
-            <a href="../Contato/index.html">Contato</a><span>|</span>
-            <a href="../Sobre/index.html">Sobre</a>
-        </nav>
-        <a href="../Login/index.html">
-            <button>
-                Login
-            </button>
-        </a>
-    </header>
-
-    <main>
-        <form>
-            <h3>Login</h3>
-            <label for="user">Usuário: </label>
-            <div class="flex">
-                <div class="icon">
-                    <i class="fa-solid fa-user icon"></i>
+        <main>
+            <form id="formulario" onsubmit="handleLogin(event)">
+                <h3>Login</h3>
+                <label for="user">Usuário: </label>
+                <div class="flex">
+                    <div class="icon">
+                        <i class="fa-solid fa-user icon"></i>
+                    </div>
+                    <input
+                        type="text"
+                        name="user"
+                        id="usernameInput"
+                        placeholder="Digite seu usuário..."
+                    />
                 </div>
-                <input type="text" name="user" placeholder="Digite seu usuário...">
-            </div>
-            <label for="password">Senha: </label>
-            <div class="flex">
-                <div class="icon">
-                    <i class="fa-solid fa-lock icon"></i>
+
+                <label for="password">Senha: </label>
+                <div class="flex">
+                    <div class="icon">
+                        <i class="fa-solid fa-lock icon"></i>
+                    </div>
+                    <input
+                        type="password"
+                        name="password"
+                        id="passwordInput"
+                        placeholder="Digite sua senha..."
+                    />
                 </div>
-                <input type="password" name="password" placeholder="Digite sua senha...">
-            </div>
-            <button> Entrar </button>
-            <p class="text-details"> Não possui conta? <a href="../Cadastro/index.html"> Cadastre-se </a></p>
-        </form>
-    </main>
 
-    <!-- Script Js -->
-    <script src="../../global/script.js"></script>
-    <script src="./script.js"></script>
-    <script>
-        function validarLogin(usuario, senha) {
-            // 
-            const usuariosValidos = ['joao', 'bizzi', 'babi', 'danilo', 'rodrigo', 'usuario6', 'usuario7', 'usuario8', 'usuario9', 'usuario10'];
-            const senhaValida = '123';
-            return usuariosValidos.includes(usuario) && senha === senhaValida;
-        }
+                <button type="submit">Entrar</button>
+                <p class="text-details">
+                    Não possui conta?
+                    <a href="../Cadastro/index.html"> Cadastre-se </a>
+                </p>
+            </form>
+        </main>
 
-        const form = document.querySelector('form');
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
+        <!-- Script Js -->
+        <script src="../../global/script.js"></script>
+        <script src="./script.js"></script>
 
-            const usuario = document.querySelector('input[name="user"]').value;
-            const senha = document.querySelector('input[name="password"]').value;
-
-            if (validarLogin(usuario, senha)) {
-                alert("Login válido");
-                window.location.href = "../listagem/index.html"
-
-
-            } else {
-                alert("Login inválido");
-
-            }
-        });
-    </script>
-
-
-    <!-- Font Awesome  -->
-    <script src="https://kit.fontawesome.com/f5419ab9d1.js" crossorigin="anonymous"></script>
-</body>
-
+        <!-- Font Awesome  -->
+        <script
+            src="https://kit.fontawesome.com/f5419ab9d1.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>

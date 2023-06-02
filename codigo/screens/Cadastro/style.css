@@ -1,7 +1,7 @@
 /* Importanto variaveis de cores do arquivo global */
 @import url(../../global/variables.css);
 
-body{
+body {
     height: 100vh;
 }
 
@@ -16,7 +16,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 header h3 {
@@ -47,6 +46,7 @@ header nav span {
 }
 
 header a button {
+    opacity: 0;
     width: auto;
     padding: 0.6rem 1.3rem;
 
@@ -60,12 +60,12 @@ header a button {
     cursor: pointer;
     transition: 0.2s;
 
-    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
 }
 
-header a button:hover{
+header a button:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -76,11 +76,12 @@ header a button:hover{
         gap: 1.3rem;
     }
 
-    header nav a{
+    header nav a {
         font-size: 0.8rem;
     }
 
-    header a, header a button{
+    header a,
+    header a button {
         width: 100%;
         font-size: 0.8rem;
     }
@@ -90,55 +91,70 @@ header a button:hover{
 
 /* COMECO MAIN  */
 
-main{
+main {
     display: flex;
     flex-direction: column;
     height: 70vh;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 1.5rem;
     border-radius: 0.5rem;
     background-color: var(--white);
-    width: 65%;
     margin: auto;
     color: var(--primary);
     font-weight: 600;
 
-    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-}   
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+}
 
-form h3{
+form h3 {
     font-size: 2rem;
     margin-bottom: 1.8rem;
 }
 
-.flex{
-    display: flex;
-    justify-content: start;
+
+
+.mensagem-erro {
+    display: none;
+    color: red;
+    margin: -10px 0;
+    font-size: 0.7rem; 
+}
+
+.input-group{
     margin-top: 0.5rem;
     margin-bottom: 1rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: start;
     border: 0.1px solid var(--primary);
     border-radius: 0.5rem;
 }
 
-.flex .icon{
+.flex .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0.5rem;
+    width: 50px;
 }
 
-#email-box{
+.campo-erro {
+    border: 1px solid red;
+}
+
+#email-box {
     padding: 0 0.9rem;
 }
 
-form .flex > input{
+form .flex > input {
     display: inline-block;
     width: 100%;
     padding: 0.6rem 1.3rem;
@@ -148,7 +164,7 @@ form .flex > input{
     border: none;
 }
 
-form .flex > input:focus{
+form .flex > input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
 }
@@ -165,67 +181,65 @@ form button {
     border: none;
     border-radius: 0.5rem;
     /* background-color: var(--primary); */
-    background: linear-gradient(0deg, var(--secondary) 5%, var(--primary) 100%) repeat;
+    background: linear-gradient(0deg, var(--secondary) 5%, var(--primary) 100%)
+        repeat;
 
     cursor: pointer;
     transition: 0.5s;
 
-    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
 }
 
-form button:hover{
+form button:hover {
     transition: 0.5s;
     color: var(--white);
     background-color: var(--secondary);
-
 }
 
-
-main .text-details{
+main .text-details {
     font-weight: lighter;
     text-align: center;
     color: #aaa;
 }
 
-main .text-details a{
+main .text-details a {
     color: var(--primary);
     font-weight: bold;
 }
 
-
-@media screen and (min-width: 576px){ 
-    main{ 
+@media screen and (min-width: 576px) {
+    main {
         height: 80vh;
-    } 
+    }
 
-    main form{
+    main form {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    main form {
         width: 50%;
     }
 }
-@media screen and (min-width: 767px){
-    main form{
-        width: 50%;
-    }
 
-}
-@media screen and (min-width: 991px){
-    main form{
-        width: 40%;
-    }
-
-
-}
-@media screen and (min-width: 1199px){
-    main form{
+@media screen and (min-width: 991px) {
+    main form {
         width: 40%;
     }
 }
-@media screen and (min-width: 1399px){ 
-    main form{
+@media screen and (min-width: 1199px) {
+    main form {
+        width: 40%;
+    }
+}
+@media screen and (min-width: 1399px) {
+    main form {
         width: 30%;
     }
 }
+
 
 /* FIM MAIN  */

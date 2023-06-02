@@ -1,0 +1,14 @@
+<script>
+    // Verificando se o usuario esta cadastrado
+    function handleUsuarioConnected() {
+        const isLogged = JSON.parse(localStorage.getItem('isLogged'))
+
+        if (isLogged) {
+            window.location.href = './screens/Listagem/index.html'
+        } else {
+            window.location.href = './screens/Home/index.html'
+        }
+    }
+
+    handleUsuarioConnected()
+</script>

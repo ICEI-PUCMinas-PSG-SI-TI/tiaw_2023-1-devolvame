@@ -6,11 +6,11 @@ usuarios = JSON.parse(localStorage.getItem('usuarios'))
 
 if (!usuarios) {
     let admins = [
-        { username: 'daniloloose', password: 'admin' },
-        { username: 'barbaragiovana', password: 'admin' },
-        { username: 'rodrigorangel', password: 'admin' },
-        { username: 'joaovictor', password: 'admin' },
-        { username: 'miguelbizzi', password: 'admin' },
+        { usuario: 'daniloloose', senha: 'admin' },
+        { usuario: 'barbaragiovana', senha: 'admin' },
+        { usuario: 'rodrigorangel', senha: 'admin' },
+        { usuario: 'joaovictor', senha: 'admin' },
+        { usuario: 'miguelbizzi', senha: 'admin' },
     ]
 
     usuarios = []
@@ -54,12 +54,12 @@ if (!objetos) {
 }
 
 /* API (CRUD) objetos */
-function cadastrarObjeto() {}
-function listarObjetos() {}
-function listarObjeto(id) {}
-function filtrarObjetos(filtro) {}
-function atualizarObjeto(id) {}
-function excluirObjeto(id) {}
+function cadastrarObjeto() { }
+function listarObjetos() { }
+function listarObjeto(id) { }
+function filtrarObjetos(filtro) { }
+function atualizarObjeto(id) { }
+function excluirObjeto(id) { }
 
 /* API (CRUD) usuários */
 function cadastrarUsuario(usuario) {
@@ -80,9 +80,9 @@ function listarUsuario(username) {
     return usuarioCadastrado ? usuarioCadastrado : false
 }
 
-function listarUsuarios() {}
-function atualizarUsuario(username) {}
-function excluirUsuario(username) {}
+function listarUsuarios() { }
+function atualizarUsuario(username) { }
+function excluirUsuario(username) { }
 
 function loginUsuario(usuario) {
     let usuarioCadastrado = usuarios.find((usuarioCadastrado) => {

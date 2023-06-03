@@ -180,7 +180,7 @@ main .top-row .button-group button.add-button {
     color: var(--primary_light);
 
     font-size: 0.8rem;
-    
+
     border: none;
     outline: none;
 }
@@ -201,7 +201,7 @@ main .top-row .button-group button.add-button {
     color: var(--primary_light);
 
     font-size: 0.8rem;
-    
+
     border: 1px solid var(--primary_light);
 }
 
@@ -223,7 +223,7 @@ main .top-row .button-group button.add-button {
     background-color: var(--primary);
 }
 
-.filter-container .search-button i{
+.filter-container .search-button i {
     margin-left: 0.5rem;
 }
 
@@ -265,17 +265,16 @@ main .top-row .button-group button.add-button {
     align-items: center;
 }
 
-.empty-list-container i{
+.empty-list-container i {
     font-size: 1.95rem;
 
     color: var(--primary_light);
 }
 
-.empty-list-container h3{
+.empty-list-container h3 {
     font-size: 1.2rem;
     color: var(--primary_light);
 }
-
 
 .object-card {
     position: relative;
@@ -454,16 +453,15 @@ main .top-row .button-group button.add-button {
     }
 
     main .top-row .button-group button.filter-button {
-       width: 100%;
+        width: 100%;
     }
-    
+
     main .top-row .button-group button.add-button {
         width: 100%;
     }
-    
-    .empty-list-container h3{
+
+    .empty-list-container h3 {
         font-size: 1.1rem;
         color: var(--primary_light);
     }
-    
 }

@@ -30,9 +30,12 @@
             <div class="top-row">
                 <h1>Listagem</h1>
                 <div class="button-group">
-
-                    
-                    <button disabled style ="color: var(--secondary)"onClick="limparFiltro()" id ="btn-limpar" >
+                    <button
+                        disabled
+                        style="color: var(--secondary)"
+                        onClick="limparFiltro()"
+                        id="btn-limpar"
+                    >
                         Limpar
                         <i class="fa-solid fa-circle-xmark"></i>
                     </button>
@@ -42,8 +45,6 @@
                         <i class="fa-solid fa-filter"></i>
                     </button>
 
-                   
-                    
                     <a href="../CadastroObjeto/index.html">
                         <button class="add-button">
                             Achei ou perdi um objeto
@@ -54,11 +55,15 @@
             </div>
 
             <!-- CONTAINER DE FILTRO -->
-            <div class="filter-container">
+            <form onsubmit="filtrar(event)" class="filter-container">
                 <div class="input-group">
                     <label for="busca">Busca:</label>
                     <div class="input-icon-container">
-                        <input type="text" id="minhabusca" placeholder="Digite sua busca..." />
+                        <input
+                            type="text"
+                            id="minhabusca"
+                            placeholder="Digite sua busca..."
+                        />
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
@@ -84,13 +89,10 @@
                     </select>
                 </div>
 
-                <button onClick="filtrar()" class="search-button">
+                <button class="search-button">
                     Buscar <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-
-                         
-                              
-            </div>
+            </form>
 
             <div class="list-container"></div>
         </main>

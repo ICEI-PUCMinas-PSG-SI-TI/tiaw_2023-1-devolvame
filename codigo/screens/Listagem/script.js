@@ -23,6 +23,7 @@ filterButton.addEventListener('click', handleOpenFilterContainer)
 
 function handleListObjetos() {
     const objects = JSON.parse(localStorage.getItem('objeto'))
+    objectsContainer.innerHTML = ''
 
     if (!objects) {
         let emptyListHtml = `<div class="empty-list-container">
@@ -30,7 +31,7 @@ function handleListObjetos() {
                                 <h3>Sem objetos cadastrados!</h3>
                             </div>`
 
-        objectsContainer.innerHTML += emptyListHtml
+        objectsContainer.innerHTML = emptyListHtml
 
         return
     }
@@ -40,8 +41,9 @@ function handleListObjetos() {
     objects.forEach((objeto) => {
         let objetoCard = `<div class="object-card">
                         <div class="image-container">
-                            <img src=${objeto.imagem ?? '../../imagens/sem-foto.gif'
-            }
+                            <img src=${
+                                objeto.imagem ?? '../../imagens/sem-foto.gif'
+                            }
                                 alt="Imagem do objeto" />
                         </div>
                         <div class="details">
@@ -61,8 +63,9 @@ function handleListObjetos() {
                                     <div class="icon-container">
                                         <i class="fa-solid fa-location-dot"></i>
                                     </div>
-                                    <span>Bloco ${objeto.bloco} - ${objeto.sala
-            }</span>
+                                    <span>Bloco ${objeto.bloco} - ${
+            objeto.sala
+        }</span>
                                 </div>
                                 <div class="row">
                                     <div class="icon-container">
@@ -72,8 +75,9 @@ function handleListObjetos() {
                                 </div>
                             </div>
 
-                            <button onclick="handleClickContatoButton(${objeto.id
-            })" class="contato-button">
+                            <button onclick="handleClickContatoButton(${
+                                objeto.id
+                            })" class="contato-button">
                                 Contato <i class="fa-solid fa-phone"></i>
                             </button>
                         </div>
@@ -88,40 +92,50 @@ window.onload = () => {
     handleListObjetos()
 }
 
-
-
-
 //BABI
 
-function filtraPorOpcoes(categoriaSelecionada, blocoSelecionado, nomeBusca){
+function filtraPorOpcoes(categoriaSelecionada, blocoSelecionado, nomeBusca) {
+    const limparButton = document.getElementById('btn-limpar')
+    limparButton.disabled = false
+    const objetos = JSON.parse(localStorage.getItem('objeto'))
 
-    const objetos = JSON.parse(localStorage.getItem("objeto"));
+    let arrayFiltrado = objetos
 
-    arrayFiltrado = objetos.filter(objeto => {
+    if (categoriaSelecionada != '') {
+        arrayFiltrado = arrayFiltrado.filter(
+            (objeto) =>
+                objeto.categoria.toLowerCase() ==
+                categoriaSelecionada.toLowerCase()
+        )
+    }
 
-        if(categoriaSelecionada != '' && objeto.categoria != categoriaSelecionada){
-            return false;
-        }
+    if (blocoSelecionado != '') {
+        arrayFiltrado = arrayFiltrado.filter(
+            (objeto) =>
+                objeto.bloco.toLowerCase() == blocoSelecionado.toLowerCase()
+        )
+    }
 
-        if(blocoSelecionado != '' && objeto.bloco.toLowerCase() != blocoSelecionado){
-            return false;
-        }
+    if (nomeBusca != '') {
+        arrayFiltrado = arrayFiltrado.filter((objeto) =>
+            objeto.nome.toLowerCase().includes(nomeBusca.toLowerCase())
+        )
+    }
 
-        if(nomeBusca.toLowerCase() != '' && !objeto.nome.toLowerCase().includes(nomeBusca)){
-            return false;
-        }
-        return true;
-    });
+    if (arrayFiltrado.length == 0) {
+        alert('Nenhum objeto encontrado com essas opções!')
+        handleListObjetos()
+        return
+    } else {
+        objetosHTML = ''
 
-    if(arrayFiltrado.length == 0){
-        alert('Nenhum objeto encontrado com essas opções!');
-    }else{
-        objetosHTML = '';
         arrayFiltrado.forEach((objeto) => {
             let objetoCard = `<div class="object-card">
                             <div class="image-container">
-                                <img src=${objeto.imagem ?? '../../imagens/sem-foto.gif'
-                }
+                                <img src=${
+                                    objeto.imagem ??
+                                    '../../imagens/sem-foto.gif'
+                                }
                                     alt="Imagem do objeto" />
                             </div>
                             <div class="details">
@@ -141,8 +155,9 @@ function filtraPorOpcoes(categoriaSelecionada, blocoSelecionado, nomeBusca){
                                         <div class="icon-container">
                                             <i class="fa-solid fa-location-dot"></i>
                                         </div>
-                                        <span>Bloco ${objeto.bloco} - ${objeto.sala
-                }</span>
+                                        <span>Bloco ${objeto.bloco} - ${
+                objeto.sala
+            }</span>
                                     </div>
                                     <div class="row">
                                         <div class="icon-container">
@@ -152,45 +167,50 @@ function filtraPorOpcoes(categoriaSelecionada, blocoSelecionado, nomeBusca){
                                     </div>
                                 </div>
     
-                                <button onclick="handleClickContatoButton(${objeto.id
-                })" class="contato-button">
+                                <button onclick="handleClickContatoButton(${
+                                    objeto.id
+                                })" class="contato-button">
                                     Contato <i class="fa-solid fa-phone"></i>
                                 </button>
                             </div>
                         </div>`
             objetosHTML += objetoCard
-        })    
-        objectsContainer.innerHTML = objetosHTML;
+        })
+
+        objectsContainer.innerHTML = objetosHTML
     }
 }
 
-function filtrar() {
-    document.getElementById("btn-limpar").disabled=false
+function filtrar(e) {
+    e.preventDefault()
 
-    const categoriaSelecionada = document.getElementById('categoria').value;
-    const blocoSelecionado = document.getElementById('bloco').value;
-    const nomeBusca = document.getElementById('minhabusca').value;
+    const categoriaSelecionada = document.getElementById('categoria').value
+    const blocoSelecionado = document.getElementById('bloco').value
+    const nomeBusca = document.getElementById('minhabusca').value
 
-    if(categoriaSelecionada == '' && blocoSelecionado == '' && nomeBusca == ''){
-        alert("Selecione ao menos das opções de filtro");
-    }else{
-        filtraPorOpcoes(categoriaSelecionada, blocoSelecionado, nomeBusca);
-    }   
+    if (
+        categoriaSelecionada == '' &&
+        blocoSelecionado == '' &&
+        nomeBusca == ''
+    ) {
+        alert('Selecione ao menos das opções de filtro')
+    } else {
+        filtraPorOpcoes(categoriaSelecionada, blocoSelecionado, nomeBusca)
+    }
 }
 
 //BABI - funcao limpar filtro
 
-function limparFiltro() {  
-    objectsContainer.innerHTML="";
-    document.getElementById("btn-limpar").disabled=true
+function limparFiltro() {
+    document.getElementById('btn-limpar').disabled = true
 
-    handleListObjetos();
-    const categoriaSelecionada = document.getElementById('categoria');
-    const blocoSelecionado = document.getElementById('bloco');
-    const nomeBusca = document.getElementById('minhabusca');
-   
-    categoriaSelecionada.selectedIndex=0;
-    blocoSelecionado.selectedIndex=0;
-    nomeBusca.value='';
-    
+    const categoriaSelecionada = document.getElementById('categoria')
+    const blocoSelecionado = document.getElementById('bloco')
+    const nomeBusca = document.getElementById('minhabusca')
+
+    categoriaSelecionada.selectedIndex = 0
+    blocoSelecionado.selectedIndex = 0
+    nomeBusca.value = ''
+
+    handleListObjetos()
 }

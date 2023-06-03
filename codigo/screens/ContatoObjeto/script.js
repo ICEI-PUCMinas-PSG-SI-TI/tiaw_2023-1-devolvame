@@ -51,9 +51,18 @@ function handleRenderDetails(id) {
 </div>`
 }
 
+function handleUsuarioConnected() {
+    const isLogged = JSON.parse(localStorage.getItem('isLogged'))
+
+    if (!isLogged) {
+        window.location.href = './screens/Home/index.html'
+    }
+}
+
 window.onload = () => {
     const urlParams = new URLSearchParams(window.location.search)
     const objetoId = urlParams.get('id')
 
     handleRenderDetails(objetoId)
+    handleUsuarioConnected()
 }

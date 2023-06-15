@@ -1,5 +1,6 @@
 var objeto = []
 var usuarios = []
+var faq = []
 
 /* cadastra admins caso localStorage vazio */
 usuarios = JSON.parse(localStorage.getItem('usuarios'))
@@ -51,6 +52,31 @@ if (!objetos) {
 
     localStorage.setItem('objetoId', 3)
     localStorage.setItem('objeto', JSON.stringify(new_objetos))
+}
+
+/* API FAQ */
+function cadastrarFaq() { }
+function listarFaq() {
+
+    faq = JSON.parse(localStorage.getItem('faq'))
+
+    if (!faq) {
+        faq = [{
+            pergunta: "Como posso cadastrar meu objeto?",
+            resposta: "Bdl aksl skaidha skdjhaksdhaj kdhalisdhadh."
+        }, {
+            pergunta: "Como contatar o usuário?",
+            resposta: "Bdl aksl skaidha skdjhaksdhaj kdhalisdhadh."
+        }, {
+            pergunta: "Achei meu objeto, e agora?",
+            resposta: "Bdl aksl skaidha skdjhaksdhaj kdhalisdhadh."
+        }
+        ]
+    }
+
+    localStorage.setItem('faq', JSON.stringify(faq));
+
+    return faq
 }
 
 /* API (CRUD) objetos */

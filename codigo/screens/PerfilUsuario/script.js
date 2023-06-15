@@ -10,7 +10,7 @@ function handleUsuarioConnected() {
     const isLogged = JSON.parse(localStorage.getItem('isLogged'))
 
     if (!isLogged) {
-        window.location.href = './screens/Home/index.html'
+        window.location.href = '../Home/index.html'
     }
 }
 

@@ -52,11 +52,31 @@ function handleRenderDetails(id) {
 }
 
 function handleUsuarioConnected() {
+    const header = document.querySelector('header')
     const isLogged = JSON.parse(localStorage.getItem('isLogged'))
 
     if (!isLogged) {
-        window.location.href = './screens/Home/index.html'
+        window.location.href = '../Home/index.html'
+    } else {
+        header.innerHTML += `                                    <div>
+        <a href="../PerfilUsuario/index.html">
+            <button>Perfil</button>
+        </a>
+        <a onclick="handleSignOut(event)">
+            <button>
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+        </a>
+    </div>`
     }
+}
+
+function handleSignOut(event) {
+    event.preventDefault()
+
+    localStorage.setItem('isLogged', false)
+    alert('Deslogado com sucesso!')
+    window.location.href = '../Home/index.html'
 }
 
 window.onload = () => {

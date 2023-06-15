@@ -1,71 +1,6 @@
 /* Importanto variaveis de cores do arquivo global */
 @import url(../../global/variables.css);
-
-/* COMECO HEADER */
-
-header {
-    position: relative;
-
-    width: 100%;
-    padding: 2rem 2.5rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-header h3 {
-    color: var(--white);
-    cursor: default;
-}
-
-header nav {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.2rem;
-}
-
-header nav a {
-    color: var(--white);
-    font-size: 1.1rem;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-}
-
-header nav span {
-    color: var(--white);
-    opacity: 0.4;
-}
-
-header a button {
-    width: auto;
-    padding: 0.6rem 1.3rem;
-
-    background: none;
-    font-size: 0.95rem;
-    color: var(--white);
-
-    border: 0.1px solid var(--white);
-    border-radius: 0.5rem;
-
-    cursor: pointer;
-    transition: 0.2s;
-
-    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-}
-
-header a button:hover{
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* FIM HEADER */
+@import url(../../global/header.css);
 
 /* COMECO MAIN */
 
@@ -81,7 +16,7 @@ main h1 {
 
 /*BABI*/
 
-.geral{
+.geral {
     display: flex;
     gap: 2.5rem;
 
@@ -93,30 +28,31 @@ main h1 {
 
 /* parte de localização */
 
-.localizacao{
+.localizacao {
     flex: 1;
     background-color: white;
     width: 50%;
 }
 
-.localizacao h2, .formulario h2{
+.localizacao h2,
+.formulario h2 {
     color: var(--primary);
-    font-size: 2.0rem;
+    font-size: 2rem;
 }
 
-.localizacao p{
-    font-size: 1.0rem;
+.localizacao p {
+    font-size: 1rem;
     margin-top: 1rem;
 }
 
-.localizacao p i{
+.localizacao p i {
     color: var(--primary);
     font-size: 22px;
     margin-right: 5px;
 }
 
-.localizacao img{
-    width: 100%;  
+.localizacao img {
+    width: 100%;
     margin-top: 10px;
     border-radius: 0.5rem;
 }
@@ -125,32 +61,32 @@ main h1 {
 
 /*inicio parte formulario*/
 
-.formulario{
+.formulario {
     width: 50%;
     flex: 1;
 }
 
-.campos{
+.campos {
     height: 100%;
     margin-top: 1rem;
 }
 
-.campo{
+.campo {
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
 }
 
-.campo label{
+.campo label {
     margin-bottom: 10px;
     font-weight: bold;
     color: var(--primary_light);
 }
 
-.campo input{
+.campo input {
     border-radius: 5px;
     font-size: 0.9rem;
-    padding: 1rem; 
+    padding: 1rem;
 
     outline: none;
 
@@ -158,14 +94,15 @@ main h1 {
     border-color: var(--primary_light);
 }
 
-.campo input::placeholder, .campo textarea::placeholder{
+.campo input::placeholder,
+.campo textarea::placeholder {
     color: var(--primary_light);
 }
 
 .campo textarea {
     border-radius: 5px;
     font-size: 0.9rem;
-    padding: 1rem; 
+    padding: 1rem;
 
     outline: none;
     resize: none;
@@ -174,30 +111,39 @@ main h1 {
     border-color: var(--primary_light);
 }
 
-.campos button{
+.campos button {
     padding: 10px;
 
-    background: linear-gradient(120deg, var(--secondary) 30%, var(--primary) 100%) repeat;
+    background: linear-gradient(
+            120deg,
+            var(--secondary) 30%,
+            var(--primary) 100%
+        )
+        repeat;
     color: white;
 
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
 
-    font-size: 1.0rem;
+    font-size: 1rem;
     font-weight: bold;
 
     text-align: center;
 
-    width:120px;
+    width: 120px;
     transition: 0.5s;
 }
 
 .campos button:hover {
-    background: linear-gradient(120deg, var(--primary) 30%, var(--secondary) 100%) repeat;
+    background: linear-gradient(
+            120deg,
+            var(--primary) 30%,
+            var(--secondary) 100%
+        )
+        repeat;
     transition: 0.5s;
 }
-
 
 @media (max-width: 1010px) {
     main {
@@ -208,7 +154,8 @@ main h1 {
         flex-direction: column;
     }
 
-    .localizacao, .formulario {
+    .localizacao,
+    .formulario {
         width: 100%;
     }
 }
@@ -220,11 +167,12 @@ main h1 {
         gap: 1.3rem;
     }
 
-    header nav a{
+    header nav a {
         font-size: 0.8rem;
     }
 
-    header a, header a button{
+    header a,
+    header a button {
         width: 100%;
         font-size: 0.8rem;
     }
@@ -235,7 +183,8 @@ main h1 {
 }
 
 @media (max-width: 344px) {
-    .localizacao h2, .formulario h2{
+    .localizacao h2,
+    .formulario h2 {
         font-size: 1.5rem;
     }
 
@@ -243,6 +192,3 @@ main h1 {
         font-size: 0.8rem;
     }
 }
-
-
-

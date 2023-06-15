@@ -1,110 +1,27 @@
 /* Importanto variaveis de cores do arquivo global */
 @import url(../../global/variables.css);
+@import url(../../global/header.css);
 
-body{
+body {
     height: 100vh;
 }
 
-/* COMECO HEADER */
-
-header {
-    position: relative;
-
-    width: 100%;
-    padding: 2rem 2.5rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-header h3 {
-    color: var(--white);
-    cursor: default;
-    
-}
-
-header nav {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.2rem;
-}
-
-header nav a {
-    color: var(--white);
-    font-size: 1.1rem;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-}
-
-header nav span {
-    color: var(--white);
-    opacity: 0.4;
-}
-
-header a button {
-    width: auto;
-    padding: 0.6rem 1.3rem;
-
-    background: none;
-    font-size: 0.95rem;
-    color: var(--white);
-
-    border: 0.1px solid var(--white);
-    border-radius: 0.5rem;
-
-    cursor: pointer;
-    transition: 0.2s;
-
-    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-}
-
-header a button:hover{
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        justify-content: center;
-        gap: 1.3rem;
-    }
-
-    header nav a{
-        font-size: 0.8rem;
-    }
-
-    header a, header a button{
-        width: 100%;
-        font-size: 0.8rem;
-    }
-}
-
-/* FIM HEADER */
-
 /* COMECO MAIN  */
 
-main{
+main {
     display: flex;
     flex-direction: column;
     height: 50vh;
 }
 
 main h3 {
-  margin-left: 250px; 
-  margin-right: 20px;
-  color: var(--white);
-  font-size: 2.5rem;
+    margin-left: 250px;
+    margin-right: 20px;
+    color: var(--white);
+    font-size: 2.5rem;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -116,31 +33,31 @@ form{
     color: var(--primary);
     font-weight: 600;
 
-    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-}   
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+}
 
 .search-bar {
     display: flex;
     align-items: center;
-  }
-  
-  .search-bar input[type="text"] {
+}
+
+.search-bar input[type='text'] {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     flex-grow: 1;
-  }
-  
-  .search-bar button[type="submit"] {
+}
+
+.search-bar button[type='submit'] {
     padding: 6px 10px;
     color: #fff;
     border: none;
     border-radius: 4px;
     margin-left: 8px;
     cursor: pointer;
-  }
+}
 
 form button {
     margin-bottom: 1rem;
@@ -154,52 +71,52 @@ form button {
     border: none;
     border-radius: 0.5rem;
     background-color: var(--primary);
-    background: linear-gradient(0deg, var(--secondary) 5%, var(--primary) 100%) repeat;
+    background: linear-gradient(0deg, var(--secondary) 5%, var(--primary) 100%)
+        repeat;
 
     cursor: pointer;
     transition: 0.5s;
 
-    -webkit-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
-    box-shadow: 4px 7px 19px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
 }
 
-form button:hover{
+form button:hover {
     transition: 0.5s;
     color: var(--white);
     background-color: var(--secondary);
-
 }
 
-  /* PARTE DO FAQ */
+/* PARTE DO FAQ */
 
-  .wrapper{
+.wrapper {
     padding: 30px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  input [type="radio"]{
+input [type='radio'] {
     display: none;
 
     /* position: absolute;
     opacity: 0;
     z-index: -1; */
-  }
+}
 
-  .accordion{
+.accordion {
     width: 60%;
     overflow: hidden;
-  }
+}
 
- .item{
+.item {
     margin-bottom: 20px;
     border-radius: 8px;
     overflow: hidden;
-  }
+}
 
-  .title{
+.title {
     background: #fff;
     display: flex;
     padding: 1em;
@@ -207,35 +124,35 @@ form button:hover{
     color: #000;
     font-weight: bold;
     cursor: pointer;
-  }
+}
 
-  .title::after{
-    content: "\276F";
+.title::after {
+    content: '\276F';
     width: 1em;
     height: 1em;
     text-align: center;
-    transition: all 0.20s;
-  }
+    transition: all 0.2s;
+}
 
-  .content{
+.content {
     background: #fff;
     padding: 0 1em;
     color: dimgray;
     max-height: 0;
-    transition: all 0.20s;
-  }
+    transition: all 0.2s;
+}
 
-  input:checked + .title:after{
+input:checked + .title:after {
     transition: rotate(90deg);
-  }
+}
 
-  input:checked ~ .content{
+input:checked ~ .content {
     max-height: 100vh;
     padding: 1em;
-  }
+}
 
 /* FIM MAIN  */
 
-label.title{
-  color: var(--secondary)
+label.title {
+    color: var(--secondary);
 }

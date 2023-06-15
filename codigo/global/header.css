@@ -61,21 +61,46 @@ header a button:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
     header {
         flex-direction: column;
         justify-content: center;
         gap: 1.3rem;
     }
+}
 
-    header nav a {
+@media (max-width: 500px) {
+    header div a,
+    header div a button,
+    header a button,
+    header a {
+        margin-top: 10px;
+        width: 100%;
         font-size: 0.8rem;
     }
 
-    header a,
-    header a button {
-        width: 100%;
+    header nav a {
+        margin-top: 0px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 453px) {
+    header nav a {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 385px) {
+    header nav a {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 357px) {
+    header nav a {
+        margin-top: 3px;
+        font-size: 0.6rem;
     }
 }
 

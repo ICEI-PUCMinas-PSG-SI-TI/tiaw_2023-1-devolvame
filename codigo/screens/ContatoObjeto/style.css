@@ -296,24 +296,6 @@ main .top-row .button-group button.add-button {
 }
 
 @media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        justify-content: center;
-        gap: 1.3rem;
-
-        height: auto;
-    }
-
-    header nav a {
-        font-size: 0.8rem;
-    }
-
-    header a,
-    header a button {
-        width: 100%;
-        font-size: 0.8rem;
-    }
-
     main .top-row {
         display: flex;
         justify-content: flex-start;

@@ -55,7 +55,11 @@ if (!objetos) {
 }
 
 /* API FAQ */
-function cadastrarFaq() { }
+function cadastrarFaq(pergunta) {
+    faq.push(pergunta)
+    localStorage.setItem('faq', JSON.stringify(faq));
+}
+
 function listarFaq() {
 
     faq = JSON.parse(localStorage.getItem('faq'))

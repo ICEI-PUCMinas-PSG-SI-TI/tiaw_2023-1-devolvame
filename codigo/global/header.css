@@ -91,17 +91,19 @@ header a button:hover {
     }
 }
 
-@media (max-width: 385px) {
+@media (max-width: 414px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav span{
+        display: none;
+    }
+
     header nav a {
-        font-size: 0.7rem;
+        text-align: center;
     }
 }
 
-@media (max-width: 357px) {
-    header nav a {
-        margin-top: 3px;
-        font-size: 0.6rem;
-    }
-}
 
 /* FIM HEADER */

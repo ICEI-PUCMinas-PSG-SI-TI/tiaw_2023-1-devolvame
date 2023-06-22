@@ -2,16 +2,12 @@
 @import url(../../global/variables.css);
 @import url(../../global/header.css);
 
-body {
-    height: 100vh;
-}
-
 /* COMECO MAIN  */
 
 main {
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    margin-bottom: 1.5rem;
 }
 
 form {

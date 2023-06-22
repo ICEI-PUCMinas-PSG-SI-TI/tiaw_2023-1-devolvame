@@ -1,6 +1,8 @@
 function handleUsuarioConnected() {
     const nav = document.querySelector('header nav')
     const header = document.querySelector('header')
+    const linkButton = document.querySelector('main a')
+    const button = document.querySelector('main a button')
     const isLogged = JSON.parse(localStorage.getItem('isLogged'))
 
     if (!isLogged) {
@@ -12,6 +14,8 @@ function handleUsuarioConnected() {
         header.innerHTML += `            <a href="../Login/index.html">
         <button>Login</button>
     </a>`
+
+        linkButton.style.display = 'flex'
     } else {
         nav.innerHTML = `                <a href="../Home/index.html">Home</a><span>|</span>
         <a href="../Listagem/index.html">Listagem</a><span>|</span>
@@ -29,6 +33,8 @@ function handleUsuarioConnected() {
             </button>
         </a>
     </div>`
+
+        linkButton.style.display = 'none'
     }
 }
 

@@ -1,90 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>DevolvaMe - Contato</title>
 
-        <!-- Link Css -->
-        <link rel="stylesheet" href="./style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevolvaMe - Contato</title>
 
-        <!-- Link Css Global -->
-        <link rel="stylesheet" href="../../global/global.css" />
+    <!-- Link Css -->
+    <link rel="stylesheet" href="./style.css" />
 
-        <!-- Link FontAwesome BABI -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        />
-    </head>
+    <!-- Link Css Global -->
+    <link rel="stylesheet" href="../../global/global.css" />
 
-    <body>
-        <header>
-            <h3>DevolvaMe</h3>
-            <nav></nav>
-        </header>
+    <!-- Link FontAwesome BABI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
 
-        <main>
-            <h1>Contato</h1>
+<body>
+    <header>
+        <h3>DevolvaMe</h3>
+        <nav></nav>
+    </header>
 
-            <!-- BABI-->
+    <main>
+        <h1>Contato</h1>
 
-            <div class="geral">
-                <div class="localizacao">
-                    <h2>Localização</h2>
-                    <p>
-                        <i class="fas fa-map-marker-alt icon"></i> Puc Minas -
-                        São Gabriel
-                    </p>
-                    <img src="img/maps.jpg" />
-                </div>
+        <!-- BABI-->
 
-                <div class="formulario">
-                    <h2>Formulário de Contato</h2>
+        <div class="geral">
+            <div class="localizacao">
+                <h2>Localização</h2>
+                <p>
+                    <i class="fas fa-map-marker-alt icon"></i> Puc Minas -
+                    São Gabriel
+                </p>
+                <!-- <img src="img/maps.jpg" /> -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.5664572535393!2d-43.92071019181357!3d-19.858288940352896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69ac3c5437e8f%3A0xaf89be1db1ea54e6!2sPUC%20Minas%20S%C3%A3o%20Gabriel!5e0!3m2!1spt-BR!2sbr!4v1687453977715!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
-                    <div class="campos">
-                        <div class="campo">
-                            <label for="pesquisa">Nome:</label>
-                            <input
-                                class="form-control"
-                                type="text"
-                                id="pesquisa"
-                                name="pesquisa"
-                                placeholder="Digite seu nome..."
-                            />
-                        </div>
-                        <div class="campo">
-                            <label for="pesquisa">Email:</label>
-                            <input
-                                class="form-control"
-                                type="text"
-                                id="pesquisa"
-                                name="pesquisa"
-                                placeholder="Digite seu email..."
-                            />
-                        </div>
-                        <div class="campo">
-                            <label for="pesquisa">Mensagem:</label>
-                            <textarea
-                                rows="5"
-                                placeholder="Digite sua mensagem"
-                            ></textarea>
-                        </div>
-                        <button type="submit">Enviar</button>
+            <div class="formulario">
+                <h2>Formulário de Contato</h2>
+
+                <div class="campos">
+                    <div class="campo">
+                        <label for="pesquisa">Nome:</label>
+                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"
+                            placeholder="Digite seu nome..." />
                     </div>
+                    <div class="campo">
+                        <label for="pesquisa">Email:</label>
+                        <input class="form-control" type="text" id="pesquisa" name="pesquisa"
+                            placeholder="Digite seu email..." />
+                    </div>
+                    <div class="campo">
+                        <label for="pesquisa">Mensagem:</label>
+                        <textarea rows="5" placeholder="Digite sua mensagem"></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <!-- FontAwesome link -->
-        <script
-            src="https://kit.fontawesome.com/9c2ad3cd0d.js"
-            crossorigin="anonymous"
-        ></script>
+    <!-- FontAwesome link -->
+    <script src="https://kit.fontawesome.com/9c2ad3cd0d.js" crossorigin="anonymous"></script>
 
-        <!-- Script Js -->
-        <script src="../../global/script.js"></script>
-        <script src="./script.js"></script>
-    </body>
+    <!-- Script Js -->
+    <script src="../../global/script.js"></script>
+    <script src="./script.js"></script>
+</body>
+
 </html>

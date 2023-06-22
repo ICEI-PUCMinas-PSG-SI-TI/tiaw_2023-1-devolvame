@@ -18,11 +18,10 @@ function handleLogin(event) {
     const usuarios = JSON.parse(localStorage.getItem('usuarios'))
 
     if (
-        usuarios.some(
-            (usuario) =>
-                usuario.username === userInput.value &&
-                usuario.password === passwordInput.value
-        )
+        loginUsuario({
+            username: userInput.value,
+            password: passwordInput.value
+        })
     ) {
         alert('Login válido! Entrando!')
         localStorage.setItem('isLogged', true)

@@ -117,8 +117,8 @@ function excluirUsuario(username) { }
 function loginUsuario(usuario) {
     let usuarioCadastrado = usuarios.find((usuarioCadastrado) => {
         if (
-            usuario.username === usuarioCadastrado.username &&
-            usuario.password === usuarioCadastrado.password
+            usuario.username === usuarioCadastrado.usuario &&
+            usuario.password === usuarioCadastrado.senha
         )
             return usuarioCadastrado
     })

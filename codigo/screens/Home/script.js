@@ -2,7 +2,6 @@ function handleUsuarioConnected() {
     const nav = document.querySelector('header nav')
     const header = document.querySelector('header')
     const linkButton = document.querySelector('main a')
-    const button = document.querySelector('main a button')
     const isLogged = JSON.parse(localStorage.getItem('isLogged'))
 
     if (!isLogged) {

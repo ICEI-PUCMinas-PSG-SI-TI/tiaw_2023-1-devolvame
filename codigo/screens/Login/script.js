@@ -15,12 +15,10 @@ function handleLogin(event) {
         return
     }
 
-    const usuarios = JSON.parse(localStorage.getItem('usuarios'))
-
     if (
         loginUsuario({
             username: userInput.value,
-            password: passwordInput.value
+            password: passwordInput.value,
         })
     ) {
         alert('Login válido! Entrando!')

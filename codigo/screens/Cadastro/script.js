@@ -100,27 +100,51 @@ function removerEstilosErro() {
 
 /*BABI */
 function formatCEP(cep) {
-    return cep.replace(/\D/g, '');
+    let cepFormatado = cep.replace(/\D/g, '');
+    if (cepFormatado.length == 8) return cepFormatado
+    else return ''
 }
 
-function preencherEndereco(cep, ruaInput, bairroInput) {
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.erro) {
-                alert('CEP não encontrado.');
-            } else {
-                ruaInput.value = data.logradouro;
-                bairroInput.value = data.bairro;
-            }
-        });
+async function preencherEndereco(cep, ruaInput, bairroInput) {
+
+    let endereco = await buscarEndereco(cep);
+    console.log(endereco);
+    if (!endereco.erro) {
+        ruaInput.value = endereco.logradouro;
+        bairroInput.value = endereco.bairro;
+        return true;
+    } else {
+        alert('CEP não encontrado.');
+        return false;
+    }
 }
 
 var cepInput = document.getElementById('cep');
 var ruaInput = document.getElementById('rua');
 var bairroInput = document.getElementById('bairro');
 
-cepInput.addEventListener('input', function () {
+cepInput.addEventListener('input', async function () {
     const cep = formatCEP(this.value);
-    preencherEndereco(cep, ruaInput, bairroInput);
+    if (cep == '') {
+        removerDisabledInputsEndereco();
+    } else {
+        if (await preencherEndereco(cep, ruaInput, bairroInput))
+            adicionarDisabledInputsEndereco();
+    }
 });
+
+function removerDisabledInputsEndereco() {
+    ruaInput.value = '';
+    bairroInput.value = '';
+    ruaInput.disabled = false;
+    bairroInput.disabled = false;
+    ruaInput.parentElement.classList.remove("input-disabled");
+    bairroInput.parentElement.classList.remove("input-disabled");
+}
+
+function adicionarDisabledInputsEndereco() {
+    ruaInput.disabled = true;
+    bairroInput.disabled = true;
+    ruaInput.parentElement.classList.add("input-disabled");
+    bairroInput.parentElement.classList.add("input-disabled");
+}

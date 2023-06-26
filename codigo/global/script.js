@@ -125,3 +125,8 @@ function loginUsuario(usuario) {
 
     return usuarioCadastrado ? usuarioCadastrado : false
 }
+
+async function buscarEndereco(cep) {
+    const res = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    return await res.json()
+}

@@ -96,3 +96,31 @@ function removerEstilosErro() {
     })
 
 }
+
+
+/*BABI */
+function formatCEP(cep) {
+    return cep.replace(/\D/g, '');
+}
+
+function preencherEndereco(cep, ruaInput, bairroInput) {
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.erro) {
+                alert('CEP não encontrado.');
+            } else {
+                ruaInput.value = data.logradouro;
+                bairroInput.value = data.bairro;
+            }
+        });
+}
+
+var cepInput = document.getElementById('cep');
+var ruaInput = document.getElementById('rua');
+var bairroInput = document.getElementById('bairro');
+
+cepInput.addEventListener('input', function () {
+    const cep = formatCEP(this.value);
+    preencherEndereco(cep, ruaInput, bairroInput);
+});

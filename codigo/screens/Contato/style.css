@@ -51,7 +51,7 @@ main h1 {
     margin-right: 5px;
 }
 
-.localizacao img {
+.localizacao iframe {
     width: 100%;
     margin-top: 10px;
     border-radius: 0.5rem;

@@ -8,59 +8,44 @@ body {
 
 /* COMECO MAIN  */
 
+/* COMECO MAIN */
+
 main {
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
+    margin: 3rem 2.5rem;
+    height: 90vh;
 }
 
-main h3 {
-    margin-left: 250px;
-    margin-right: 20px;
+main h1 {
     color: var(--white);
     font-size: 2.5rem;
 }
 
 form {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+
     padding: 1.5rem;
     border-radius: 0.5rem;
     background-color: var(--white);
-    width: 60%;
-    margin: auto;
-    color: var(--primary);
-    font-weight: 600;
+
+    margin-top: 25px;
+    gap: 25px;
 
     -webkit-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 4px 7px 19px 1px rgba(0, 0, 0, 0.2);
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-}
-
-.search-bar input[type='text'] {
-    padding: 8px;
+form input {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    flex-grow: 1;
-}
-
-.search-bar button[type='submit'] {
-    padding: 6px 10px;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    margin-left: 8px;
-    cursor: pointer;
+    outline: none;
 }
 
 form button {
-    margin-bottom: 1rem;
     padding: 0.8rem 5rem;
 
     font-size: medium;
@@ -106,7 +91,7 @@ input [type='radio'] {
 }
 
 .accordion {
-    width: 60%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -155,4 +140,10 @@ input:checked ~ .content {
 
 label.title {
     color: var(--secondary);
+}
+
+@media (max-width: 585px) {
+    form {
+        flex-direction: column;
+    }
 }

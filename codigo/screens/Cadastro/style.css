@@ -50,6 +50,11 @@ form h3 {
     border-radius: 0.5rem;
 }
 
+.flex.input-disabled{
+    border: 0.1px solid #2e7b13;
+    background-color: #d4f2d8;
+}
+
 .flex .icon {
     display: flex;
     justify-content: center;
@@ -153,3 +158,25 @@ main .text-details a {
 }
 
 /* FIM MAIN  */
+
+
+/*BABI */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .grid-item-full {
+    grid-column: 1 / span 2;
+  }
+  
+  .grid-item {
+    grid-column: span 1;
+  }
+  
+
+ 
+  
+  
+  

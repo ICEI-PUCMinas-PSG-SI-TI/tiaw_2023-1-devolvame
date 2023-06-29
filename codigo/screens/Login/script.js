@@ -21,8 +21,10 @@ function handleLogin(event) {
             password: passwordInput.value,
         })
     ) {
+
         alert('Login válido! Entrando!')
         localStorage.setItem('isLogged', true)
+        localStorage.setItem('userLogged', userInput.value)
         window.location.href = '../listagem/index.html'
     } else {
         alert('Login inválido')

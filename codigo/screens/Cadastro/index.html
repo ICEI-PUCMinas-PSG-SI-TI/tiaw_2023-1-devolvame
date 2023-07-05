@@ -1,182 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DevolvaMe - Cadastro</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevolvaMe - Cadastro</title>
+        <!-- Link Css -->
+        <link rel="stylesheet" href="./style.css" />
 
-    <!-- Link Css -->
-    <link rel="stylesheet" href="./style.css" />
+        <!-- Link Css Global -->
+        <link rel="stylesheet" href="../../global/global.css" />
+    </head>
 
-    <!-- Link Css Global -->
-    <link rel="stylesheet" href="../../global/global.css" />
+    <body>
+        <header>
+            <h3>DevolvaMe</h3>
+            <nav>
+                <a href="../Home/index.html">Home</a><span>|</span>
+                <a href="../Contato/index.html">Contato</a><span>|</span>
+                <a href="../Sobre/index.html">Sobre</a><span>|</span>
+                <a href="../Faq/index.html">Faq</a>
+            </nav>
+            <a href="../Login/index.html">
+                <button>Login</button>
+            </a>
+        </header>
 
-
-</head>
-
-<body>
-    <header>
-        <h3>DevolvaMe</h3>
-        <nav>
-            <a href="../Home/index.html">Home</a><span>|</span>
-            <a href="../Contato/index.html">Contato</a><span>|</span>
-            <a href="../Sobre/index.html">Sobre</a><span>|</span>
-            <a href="../Faq/index.html">Faq</a>
-        </nav>
-        <a href="../Login/index.html">
-            <button>Login</button>
-        </a>
-    </header>
-
-    <main>
-        <form>
-            <h3>Cadastro</h3>
-            <label for="user">Usuário: </label>
-            <div class="input-group">
-                <div class="flex">
-                    <div class="icon">
-                        <i class="fa-solid fa-user icon"></i>
+        <main>
+            <form>
+                <h3>Cadastro</h3>
+                <label for="user">Usuário: </label>
+                <div class="input-group">
+                    <div class="flex">
+                        <div class="icon">
+                            <i class="fa-solid fa-user icon"></i>
+                        </div>
+                        <input
+                            required
+                            type="text"
+                            id="user"
+                            name="user"
+                            placeholder="Digite seu usuário..."
+                        />
                     </div>
-                    <input required type="text" id="user" name="user" placeholder="Digite seu usuário..." />
+                    <span class="mensagem-erro">Preencha o campo!</span>
                 </div>
-                <span class="mensagem-erro">Preencha o campo!</span>
-            </div>
 
-            <div class="input-group">
-                <label for="nome">Nome: </label>
-                <div class="flex">
-                    <div class="icon">
-                        <i class="fa-solid fa-circle-user"></i>
+                <div class="input-group">
+                    <label for="nome">Nome: </label>
+                    <div class="flex">
+                        <div class="icon">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <input
+                            required
+                            id="nome"
+                            type="text"
+                            name="nome"
+                            placeholder="Digite seu nome..."
+                        />
                     </div>
-                    <input required id="nome" type="text" name="nome" placeholder="Digite seu nome..." />
+                    <span class="mensagem-erro">Preencha o campo!</span>
                 </div>
-                <span class="mensagem-erro">Preencha o campo!</span>
-            </div>
 
-            <div class="input-group">
-                <label for="email">Email: </label>
-                <div class="flex">
-                    <div id="email-box" class="icon">
-                        <i class="fa-solid fa-envelope"></i>
+                <div class="input-group">
+                    <label for="email">Email: </label>
+                    <div class="flex">
+                        <div id="email-box" class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <input
+                            required
+                            id="email"
+                            type="email"
+                            name="email"
+                            placeholder="Digite seu email..."
+                        />
                     </div>
-                    <input required id="email" type="email" name="email" placeholder="Digite seu email..." />
+                    <span class="mensagem-erro">Preencha o campo!</span>
                 </div>
-                <span class="mensagem-erro">Preencha o campo!</span>
-            </div>
 
-            <div class="input-group">
-                <label for="celular">Celular: </label>
-                <div class="flex">
-                    <div class="icon">
-                        <i class="fa-solid fa-phone"></i>
+                <div class="input-group">
+                    <label for="celular">Celular: </label>
+                    <div class="flex">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <input
+                            required
+                            id="celular"
+                            type="tel"
+                            placeholder="(00) 00000-0000"
+                            name="celular"
+                            maxlength="11"
+                        />
                     </div>
-                    <input required id="celular" type="tel" placeholder="(00) 00000-0000" name="celular" />
+                    <span class="mensagem-erro">Preencha o campo!</span>
                 </div>
-                <span class="mensagem-erro">Preencha o campo!</span>
-            </div>
 
-            <div class="input-group">
-                <label for="password">Senha: </label>
-                <div class="flex">
-                    <div class="icon">
-                        <i class="fa-solid fa-lock icon"></i>
+                <div class="input-group">
+                    <label for="password">Senha: </label>
+                    <div class="flex">
+                        <div class="icon">
+                            <i class="fa-solid fa-lock icon"></i>
+                        </div>
+                        <input
+                            required
+                            id="password"
+                            type="password"
+                            name="password"
+                            placeholder="Digite sua senha..."
+                        />
                     </div>
-                    <input required id="password" type="password" name="password" placeholder="Digite sua senha..." />
+                    <span class="mensagem-erro">Preencha o campo!</span>
                 </div>
-                <span class="mensagem-erro">Preencha o campo!</span>
-            </div>
 
-            <div class="input-group">
-                <label for="passwordConfirm">Confirme a Senha: </label>
-                <div class="flex">
-                    <div class="icon">
-                        <i class="fa-solid fa-lock icon"></i>
+                <div class="input-group">
+                    <label for="passwordConfirm">Confirme a Senha: </label>
+                    <div class="flex">
+                        <div class="icon">
+                            <i class="fa-solid fa-lock icon"></i>
+                        </div>
+                        <input
+                            required
+                            id="passwordConfirm"
+                            type="password"
+                            name="passwordConfirm"
+                            placeholder="Confirme sua senha..."
+                        />
                     </div>
-                    <input required id="passwordConfirm" type="password" name="passwordConfirm"
-                        placeholder="Confirme sua senha..." />
+                    <span class="mensagem-erro">Preencha o campo!</span>
                 </div>
-                <span class="mensagem-erro">Preencha o campo!</span>
-            </div>
 
-            <!--BABI-->
-            <div class="grid-container">
-                <div class="grid-item-full">
-                    <div class="input-group">
-                        <label for="cep">CEP:</label>
-                        <div class="flex">
-                            <div class="icon">
-                                <i class="fa-solid fa-home icon"></i>
+                <!--BABI-->
+                <div class="grid-container">
+                    <div class="grid-item-full">
+                        <div class="input-group">
+                            <label for="cep">CEP:</label>
+                            <div class="flex">
+                                <div class="icon">
+                                    <i class="fa-solid fa-home icon"></i>
+                                </div>
+                                <input
+                                    required
+                                    id="cep"
+                                    type="text"
+                                    name="cep"
+                                    placeholder="Digite o CEP..."
+                                    maxlength="8"
+                                />
                             </div>
-                            <input required id="cep" type="text" name="cep" placeholder="Digite o CEP..." />
+                        </div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="input-group">
+                            <label for="rua">Rua:</label>
+                            <div class="flex">
+                                <div class="icon">
+                                    <i class="fa-solid fa-road icon"></i>
+                                </div>
+                                <input
+                                    required
+                                    id="rua"
+                                    type="text"
+                                    name="rua"
+                                    placeholder="Digite sua rua"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="input-group">
+                            <label for="bairro">Bairro:</label>
+                            <div class="flex">
+                                <div class="icon">
+                                    <i class="fa-solid fa-city icon"></i>
+                                </div>
+                                <input
+                                    required
+                                    id="bairro"
+                                    type="text"
+                                    name="bairro"
+                                    placeholder="Digite seu bairro"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="input-group">
+                            <label for="numero">Número:</label>
+                            <div class="flex">
+                                <div class="icon">
+                                    <i class="fa-solid fa-home icon"></i>
+                                </div>
+                                <input
+                                    required
+                                    id="numero"
+                                    type="text"
+                                    name="numero"
+                                    placeholder="Digite o número"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="input-group">
+                            <label for="complemento">Complemento:</label>
+                            <div class="flex">
+                                <div class="icon">
+                                    <i class="fa-solid fa-home icon"></i>
+                                </div>
+                                <input
+                                    id="complemento"
+                                    type="text"
+                                    name="complemento"
+                                    placeholder="Digite o complemento"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!--FIM BABI-->
 
-                <div class="grid-item">
-                    <div class="input-group">
-                        <label for="rua">Rua:</label>
-                        <div class="flex">
-                            <div class="icon">
-                                <i class="fa-solid fa-road icon"></i>
-                            </div>
-                            <input required id="rua" type="text" name="rua" placeholder="Rua" />
-                        </div>
-                    </div>
-                </div>
+                <button id="botao-cadastro">Cadastrar</button>
+                <p class="text-details">
+                    Possui uma conta? <a href="../Login/index.html"> Entre </a>
+                </p>
+            </form>
+        </main>
 
-                <div class="grid-item">
-                    <div class="input-group">
-                        <label for="bairro">Bairro:</label>
-                        <div class="flex">
-                            <div class="icon">
-                                <i class="fa-solid fa-city icon"></i>
-                            </div>
-                            <input required id="bairro" type="text" name="bairro" placeholder="Bairro" />
-                        </div>
-                    </div>
-                </div>
+        <!-- Script Js -->
+        <script src="../../global/script.js"></script>
+        <script src="./script.js"></script>
 
-                <div class="grid-item">
-                    <div class="input-group">
-                        <label for="numero">Número:</label>
-                        <div class="flex">
-                            <div class="icon">
-                                <i class="fa-solid fa-home icon"></i>
-                            </div>
-                            <input required id="numero" type="text" name="numero" placeholder="Número" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <div class="input-group">
-                        <label for="complemento">Complemento:</label>
-                        <div class="flex">
-                            <div class="icon">
-                                <i class="fa-solid fa-home icon"></i>
-                            </div>
-                            <input required id="complemento" type="text" name="complemento" placeholder="Complemento" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--FIM BABI-->
-
-            <button id="botao-cadastro">Cadastrar</button>
-            <p class="text-details">
-                Possui uma conta? <a href="../Login/index.html"> Entre </a>
-            </p>
-        </form>
-    </main>
-
-    <!-- Script Js -->
-    <script src="../../global/script.js"></script>
-    <script src="./script.js"></script>
-
-    <!-- Font Awesome  -->
-    <script src="https://kit.fontawesome.com/f5419ab9d1.js" crossorigin="anonymous"></script>
-</body>
-
+        <!-- Font Awesome  -->
+        <script
+            src="https://kit.fontawesome.com/f5419ab9d1.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>

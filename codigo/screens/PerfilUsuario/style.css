@@ -111,15 +111,8 @@ main h1 {
 
 /*botao alterar*/
 
-.geral .dadosgeral button[type='submit'] {
+#alterar {
     margin-top: 5px;
-
-    background: linear-gradient(
-            120deg,
-            var(--secondary) 30%,
-            var(--primary) 100%
-        )
-        repeat;
     color: white;
 
     border: none;
@@ -133,6 +126,8 @@ main h1 {
 
     padding: 10px 30px;
     transition: 0.5s;
+
+    background-color: rgb(37, 10, 241);
 }
 
 /* botao deletar */

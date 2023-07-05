@@ -143,19 +143,16 @@ function listarFaq() {
     faq = JSON.parse(localStorage.getItem('faq'))
 
     if (!faq) {
-        faq = [
-            {
-                pergunta: 'Como posso cadastrar meu objeto?',
-                resposta: 'Bdl aksl skaidha skdjhaksdhaj kdhalisdhadh.',
-            },
-            {
-                pergunta: 'Como contatar o usuário?',
-                resposta: 'Bdl aksl skaidha skdjhaksdhaj kdhalisdhadh.',
-            },
-            {
-                pergunta: 'Achei meu objeto, e agora?',
-                resposta: 'Bdl aksl skaidha skdjhaksdhaj kdhalisdhadh.',
-            },
+        faq = [{
+            pergunta: "Como posso cadastrar um objeto?",
+            resposta: "Existe uma página específica para isso, chamada de 'Cadastro de Objeto'. Lá você irá adicionar as informações sobre o objeto encontrado junto de uma foto, depois é só postar."
+        }, {
+            pergunta: "Como contatar o usuário?",
+            resposta: "A pessoa que encontrou o objeto deve deixar algum meio de contato para que o dono consiga recuperar de volta."
+        }, {
+            pergunta: "Achei meu objeto, e agora?",
+            resposta: "Deverá entrar em contato com o usuário que o encontrou e olhar uma forma de recuperar o objeto de volta."
+        }
         ]
     }
 

@@ -1,8 +1,12 @@
 function handleRenderDetails(id) {
     const container = document.querySelector('.container')
     const objetos = JSON.parse(localStorage.getItem('objeto'))
+    const usuarios = JSON.parse(localStorage.getItem('usuarios'))
 
     const objeto_selected = objetos.find((objeto) => objeto.id === Number(id))
+    const user_selected = usuarios.find(
+        (user) => user.usuario == objeto_selected.quemEncontrou
+    )
 
     container.innerHTML = ` <div class="object-card">
     <div class="image-container">
@@ -12,7 +16,7 @@ function handleRenderDetails(id) {
     <div class="details">
         <div class="title-container">
             <h3>${objeto_selected.nome}</h3>
-            <span>Encontrado por Usuario123</span>
+            <span>Encontrado por ${objeto_selected.quemEncontrou}</span>
         </div>
 
         <div class="info">
@@ -41,10 +45,10 @@ function handleRenderDetails(id) {
 
         <div class="contato-info">
             <i class="fa-solid fa-phone"></i>
-            <span>Telefone: (99) 999999-9999</span>
+            <span>Telefone: ${user_selected.celular}</span>
 
             <i class="fa-solid fa-envelope"></i>
-            <span> Email: usuario@gmail.com </span>
+            <span> Email: ${user_selected.email} </span>
         </div>
 
     </div>

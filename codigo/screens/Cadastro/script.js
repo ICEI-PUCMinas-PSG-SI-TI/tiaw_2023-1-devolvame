@@ -1,150 +1,180 @@
-const inputUsuario = document.querySelector("#user")
-const inputNome = document.querySelector("#nome")
-const inputEmail = document.querySelector("#email")
-const inputCelular = document.querySelector("#celular")
-const inputSenha = document.querySelector("#password")
-const inputConfirmeSenha = document.querySelector("#passwordConfirm")
-const botaoCadastrar = document.querySelector("#botao-cadastro")
+const inputUsuario = document.querySelector('#user')
+const inputNome = document.querySelector('#nome')
+const inputEmail = document.querySelector('#email')
+const inputCelular = document.querySelector('#celular')
+const inputSenha = document.querySelector('#password')
+const inputConfirmeSenha = document.querySelector('#passwordConfirm')
+const botaoCadastrar = document.querySelector('#botao-cadastro')
+const InputCep = document.querySelector('#cep')
+const InputRua = document.querySelector('#rua')
+const InputBairro = document.querySelector('#bairro')
+const InputNumero = document.querySelector('#numero')
+const InputComplemento = document.querySelector('#complemento')
 
-botaoCadastrar.addEventListener("click", validaCadastro)
+botaoCadastrar.addEventListener('click', validaCadastro)
 
 function validaCadastro(e) {
-    e.preventDefault();
+    e.preventDefault()
 
-    const usuario = inputUsuario.value;
-    const nome = inputNome.value;
-    const email = inputEmail.value;
-    const celular = inputCelular.value;
-    const senha = inputSenha.value;
-    const confirmeSenha = inputConfirmeSenha.value;
+    const usuario = inputUsuario.value
+    const nome = inputNome.value
+    const email = inputEmail.value
+    const celular = inputCelular.value
+    const senha = inputSenha.value
+    const confirmeSenha = inputConfirmeSenha.value
+    const cep = InputCep.value
+    const rua = InputRua.value
+    const bairro = InputBairro.value
+    const numero = InputNumero.value
+    const complemento = InputComplemento.value
 
     // Remove todas as classes de erro existentes
-    removerEstilosErro();
+    removerEstilosErro()
 
     // Verifica se algum campo está vazio
-    if (!usuario || !nome || !email || !celular || !senha || !confirmeSenha) {
-
-        if (!usuario) { marcarCampoErro(inputUsuario) }
-        if (!nome) { marcarCampoErro(inputNome) }
-        if (!email) { marcarCampoErro(inputEmail) }
-        if (!celular) { marcarCampoErro(inputCelular) }
-        if (!senha) { marcarCampoErro(inputSenha) }
-        if (!confirmeSenha) { marcarCampoErro(inputConfirmeSenha) }
+    if (
+        !usuario ||
+        !nome ||
+        !email ||
+        !celular ||
+        !senha ||
+        !confirmeSenha ||
+        !cep ||
+        !rua ||
+        !bairro ||
+        !numero
+    ) {
+        if (!usuario) marcarCampoErro(inputUsuario)
+        if (!nome) marcarCampoErro(inputNome)
+        if (!email) marcarCampoErro(inputEmail)
+        if (!celular) marcarCampoErro(inputCelular)
+        if (!senha) marcarCampoErro(inputSenha)
+        if (!confirmeSenha) marcarCampoErro(inputConfirmeSenha)
+        if (!cep) marcarCampoErro(InputCep)
+        if (!rua) marcarCampoErro(InputRua)
+        if (!bairro) marcarCampoErro(InputBairro)
+        if (!numero) marcarCampoErro(InputNumero)
 
         return
     }
 
     // Verifica se as senhas coincidem
     if (senha !== confirmeSenha) {
-        marcarCampoErro(inputSenha, "As senhas são diferentes!");
-        marcarCampoErro(inputConfirmeSenha, "As senhas são diferentes!");
-        return;
+        marcarCampoErro(inputSenha, 'As senhas são diferentes!')
+        marcarCampoErro(inputConfirmeSenha, 'As senhas são diferentes!')
+        return
     }
 
     // codigo para cadastro de usuario vem aqui
     let usuarioParaCadastro = {
-        usuario: usuario,
-        nome: nome,
-        email: email,
-        celular: celular,
-        senha: senha
+        usuario,
+        nome,
+        email,
+        celular,
+        senha,
+        cep,
+        rua,
+        bairro,
+        numero,
+        complemento: complemento ?? null,
     }
 
-    console.log("validação com sucesso", usuarioParaCadastro)
-    cadastrar(usuarioParaCadastro);
-
+    console.log('validação com sucesso', usuarioParaCadastro)
+    cadastrar(usuarioParaCadastro)
 }
 
 function cadastrar(usuarioCadastro) {
-
-    if (usuarios.find(usuario => usuario.usuario === usuarioCadastro.usuario)) {
-        alert("Usuário já existe! Por favor, escolha um nome de usuário diferente.");
-        return;
+    if (
+        usuarios.find((usuario) => usuario.usuario === usuarioCadastro.usuario)
+    ) {
+        alert(
+            'Usuário já existe! Por favor, escolha um nome de usuário diferente.'
+        )
+        return
     }
 
-    if (usuarios.find(usuario => usuario.email === usuarioCadastro.email)) {
-        alert("Email já existe! Por favor, escolha um email diferente.");
-        return;
+    if (usuarios.find((usuario) => usuario.email === usuarioCadastro.email)) {
+        alert('Email já existe! Por favor, escolha um email diferente.')
+        return
     }
 
     // Armazenar os dados de cadastro no LocalStorage
-    usuarios.push(usuarioCadastro);
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    usuarios.push(usuarioCadastro)
+    localStorage.setItem('usuarios', JSON.stringify(usuarios))
+
+    alert('Usuario cadastrado com sucesso!')
 
     // Redirecionar para a página de login
-    window.location.href = "../Login/index.html";
+    window.location.href = '../Login/index.html'
 }
 
 // Mensagem de erro abaixo do input
 function marcarCampoErro(campo, mensagem) {
-    campo.parentElement.classList.add("campo-erro");
+    campo.parentElement.classList.add('campo-erro')
     let span = campo.parentElement.nextElementSibling
-    span.innerText = mensagem || "Preencha o campo!";
-    span.style.display = "inline-block"
+    span.innerText = mensagem || 'Preencha o campo!'
+    span.style.display = 'inline-block'
 }
 
 // Função auxiliar para remover todas as classes de erro dos campos
 function removerEstilosErro() {
-    const campos = document.querySelectorAll("input");
-    campos.forEach(campo => {
-        campo.parentElement.classList.remove("campo-erro");
-    });
-
-    const spans = document.querySelectorAll("span")
-    spans.forEach(span => {
-        span.style.display = "none"
+    const campos = document.querySelectorAll('input')
+    campos.forEach((campo) => {
+        campo.parentElement.classList.remove('campo-erro')
     })
 
+    const spans = document.querySelectorAll('span')
+    spans.forEach((span) => {
+        span.style.display = 'none'
+    })
 }
-
 
 /*BABI */
 function formatCEP(cep) {
-    let cepFormatado = cep.replace(/\D/g, '');
+    let cepFormatado = cep.replace(/\D/g, '')
     if (cepFormatado.length == 8) return cepFormatado
     else return ''
 }
 
 async function preencherEndereco(cep, ruaInput, bairroInput) {
-
-    let endereco = await buscarEndereco(cep);
-    console.log(endereco);
+    let endereco = await buscarEndereco(cep)
+    console.log(endereco)
     if (!endereco.erro) {
-        ruaInput.value = endereco.logradouro;
-        bairroInput.value = endereco.bairro;
-        return true;
+        ruaInput.value = endereco.logradouro
+        bairroInput.value = endereco.bairro
+        return true
     } else {
-        alert('CEP não encontrado.');
-        return false;
+        alert('CEP não encontrado.')
+        return false
     }
 }
 
-var cepInput = document.getElementById('cep');
-var ruaInput = document.getElementById('rua');
-var bairroInput = document.getElementById('bairro');
+var cepInput = document.getElementById('cep')
+var ruaInput = document.getElementById('rua')
+var bairroInput = document.getElementById('bairro')
 
 cepInput.addEventListener('input', async function () {
-    const cep = formatCEP(this.value);
+    const cep = formatCEP(this.value)
     if (cep == '') {
-        removerDisabledInputsEndereco();
+        removerDisabledInputsEndereco()
     } else {
         if (await preencherEndereco(cep, ruaInput, bairroInput))
-            adicionarDisabledInputsEndereco();
+            adicionarDisabledInputsEndereco()
     }
-});
+})
 
 function removerDisabledInputsEndereco() {
-    ruaInput.value = '';
-    bairroInput.value = '';
-    ruaInput.disabled = false;
-    bairroInput.disabled = false;
-    ruaInput.parentElement.classList.remove("input-disabled");
-    bairroInput.parentElement.classList.remove("input-disabled");
+    ruaInput.value = ''
+    bairroInput.value = ''
+    ruaInput.disabled = false
+    bairroInput.disabled = false
+    ruaInput.parentElement.classList.remove('input-disabled')
+    bairroInput.parentElement.classList.remove('input-disabled')
 }
 
 function adicionarDisabledInputsEndereco() {
-    ruaInput.disabled = true;
-    bairroInput.disabled = true;
-    ruaInput.parentElement.classList.add("input-disabled");
-    bairroInput.parentElement.classList.add("input-disabled");
+    ruaInput.disabled = true
+    bairroInput.disabled = true
+    ruaInput.parentElement.classList.add('input-disabled')
+    bairroInput.parentElement.classList.add('input-disabled')
 }

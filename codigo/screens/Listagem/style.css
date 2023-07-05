@@ -318,7 +318,7 @@ main .top-row .button-group button.add-button {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 706px) {
     main .top-row {
         display: flex;
         justify-content: flex-start;
@@ -328,7 +328,8 @@ main .top-row .button-group button.add-button {
 
         flex: 1;
     }
-
+}
+@media (max-width: 600px) {
     .object-card {
         height: auto;
         flex-direction: column;

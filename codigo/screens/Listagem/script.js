@@ -49,7 +49,9 @@ function handleListObjetos() {
                         <div class="details">
                             <div class="title-container">
                                 <h3>${objeto.nome}</h3>
-                                <span>Encontrado por Usuario123</span>
+                                <span>Encontrado por ${
+                                    objeto.quemEncontrou
+                                }</span>
                             </div>
 
                             <div class="info">

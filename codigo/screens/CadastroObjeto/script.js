@@ -15,6 +15,7 @@ var listaObjetos = []
 function cadastrar() {
     let old_objects = JSON.parse(localStorage.getItem('objeto'))
     let objetoId = JSON.parse(localStorage.getItem('objetoId'))
+    let quemEncontrou = localStorage.getItem('userLogged')
 
     if (old_objects) {
         old_objects.forEach((object) => {
@@ -27,6 +28,7 @@ function cadastrar() {
         nome: inputNomeObjeto.value,
         descricao: inputDescricao.value,
         categoria: selectCategoria.value,
+        quemEncontrou,
         bloco: selectBloco.value,
         sala: inputSala.value,
         data: inputData.value,

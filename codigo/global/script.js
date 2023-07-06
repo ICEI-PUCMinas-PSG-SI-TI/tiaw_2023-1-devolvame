@@ -128,10 +128,14 @@ if (!objetos) {
             imagem: 'https://images-americanas.b2w.io/produtos/01/00/img/4339562/3/4339562379_1GG.jpg',
         },
     ]
-
-    localStorage.setItem('objetoId', 3)
     localStorage.setItem('objeto', JSON.stringify(new_objetos))
 }
+
+// Correção dinâmica do objId
+localStorage.setItem('objetoId', '');
+let objetoId = JSON.parse(localStorage.getItem('objeto')).length
+localStorage.setItem('objetoId', JSON.stringify(objetoId + 1));
+
 
 /* API FAQ */
 function cadastrarFaq(pergunta) {
@@ -162,12 +166,12 @@ function listarFaq() {
 }
 
 /* API (CRUD) objetos */
-function cadastrarObjeto() {}
-function listarObjetos() {}
-function listarObjeto(id) {}
-function filtrarObjetos(filtro) {}
-function atualizarObjeto(id) {}
-function excluirObjeto(id) {}
+function cadastrarObjeto() { }
+function listarObjetos() { }
+function listarObjeto(id) { }
+function filtrarObjetos(filtro) { }
+function atualizarObjeto(id) { }
+function excluirObjeto(id) { }
 
 /* API (CRUD) usuários */
 function cadastrarUsuario(usuario) {
@@ -188,9 +192,9 @@ function listarUsuario(username) {
     return usuarioCadastrado ? usuarioCadastrado : false
 }
 
-function listarUsuarios() {}
-function atualizarUsuario(username) {}
-function excluirUsuario(username) {}
+function listarUsuarios() { }
+function atualizarUsuario(username) { }
+function excluirUsuario(username) { }
 
 function loginUsuario(usuario) {
     let usuarioCadastrado = usuarios.find((usuarioCadastrado) => {

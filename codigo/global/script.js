@@ -132,10 +132,8 @@ if (!objetos) {
 }
 
 // Correção dinâmica do objId
-localStorage.setItem('objetoId', '');
 let objetoId = JSON.parse(localStorage.getItem('objeto')).length
-localStorage.setItem('objetoId', JSON.stringify(objetoId + 1));
-
+localStorage.setItem('objetoId', JSON.stringify(objetoId + 1))
 
 /* API FAQ */
 function cadastrarFaq(pergunta) {
@@ -147,16 +145,22 @@ function listarFaq() {
     faq = JSON.parse(localStorage.getItem('faq'))
 
     if (!faq) {
-        faq = [{
-            pergunta: "Como posso cadastrar um objeto?",
-            resposta: "Existe uma página específica para isso, chamada de 'Cadastro de Objeto'. Lá você irá adicionar as informações sobre o objeto encontrado junto de uma foto, depois é só postar."
-        }, {
-            pergunta: "Como contatar o usuário?",
-            resposta: "A pessoa que encontrou o objeto deve deixar algum meio de contato para que o dono consiga recuperar de volta."
-        }, {
-            pergunta: "Achei meu objeto, e agora?",
-            resposta: "Deverá entrar em contato com o usuário que o encontrou e olhar uma forma de recuperar o objeto de volta."
-        }
+        faq = [
+            {
+                pergunta: 'Como posso cadastrar um objeto?',
+                resposta:
+                    "Existe uma página específica para isso, chamada de 'Cadastro de Objeto'. Lá você irá adicionar as informações sobre o objeto encontrado junto de uma foto, depois é só postar.",
+            },
+            {
+                pergunta: 'Como contatar o usuário?',
+                resposta:
+                    'A pessoa que encontrou o objeto deve deixar algum meio de contato para que o dono consiga recuperar de volta.',
+            },
+            {
+                pergunta: 'Achei meu objeto, e agora?',
+                resposta:
+                    'Deverá entrar em contato com o usuário que o encontrou e olhar uma forma de recuperar o objeto de volta.',
+            },
         ]
     }
 
@@ -166,12 +170,12 @@ function listarFaq() {
 }
 
 /* API (CRUD) objetos */
-function cadastrarObjeto() { }
-function listarObjetos() { }
-function listarObjeto(id) { }
-function filtrarObjetos(filtro) { }
-function atualizarObjeto(id) { }
-function excluirObjeto(id) { }
+function cadastrarObjeto() {}
+function listarObjetos() {}
+function listarObjeto(id) {}
+function filtrarObjetos(filtro) {}
+function atualizarObjeto(id) {}
+function excluirObjeto(id) {}
 
 /* API (CRUD) usuários */
 function cadastrarUsuario(usuario) {
@@ -192,9 +196,9 @@ function listarUsuario(username) {
     return usuarioCadastrado ? usuarioCadastrado : false
 }
 
-function listarUsuarios() { }
-function atualizarUsuario(username) { }
-function excluirUsuario(username) { }
+function listarUsuarios() {}
+function atualizarUsuario(username) {}
+function excluirUsuario(username) {}
 
 function loginUsuario(usuario) {
     let usuarioCadastrado = usuarios.find((usuarioCadastrado) => {

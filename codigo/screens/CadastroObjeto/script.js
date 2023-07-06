@@ -12,7 +12,9 @@ const inputSala = document.getElementById('sala')
 
 var listaObjetos = []
 
-function cadastrar() {
+function cadastrar(event) {
+    event.preventDefault()
+
     let old_objects = JSON.parse(localStorage.getItem('objeto'))
     let objetoId = JSON.parse(localStorage.getItem('objetoId'))
     let quemEncontrou = localStorage.getItem('userLogged')

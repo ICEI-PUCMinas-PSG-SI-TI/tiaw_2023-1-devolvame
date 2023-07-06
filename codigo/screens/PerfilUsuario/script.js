@@ -1,91 +1,76 @@
 function handleSignOut(event) {
-    event.preventDefault();
+    event.preventDefault()
 
-    localStorage.setItem('isLogged', false);
-    alert('Deslogado com sucesso!');
-    window.location.href = '../Home/index.html';
+    localStorage.setItem('isLogged', false)
+    alert('Deslogado com sucesso!')
+    window.location.href = '../Home/index.html'
 }
 
 function handleUsuarioConnected() {
-    const isLogged = JSON.parse(localStorage.getItem('isLogged'));
+    const isLogged = JSON.parse(localStorage.getItem('isLogged'))
 
-    // Obtendo o elemento de input pelo id
-    var campoNome = document.getElementById('pesquisa');
-    var campoTelefone = document.getElementById('telefone');
-    var campoEmail = document.getElementById('email');
-    var senhaOld = document.getElementById('senhaold');
-    var novaSenha = document.getElementById('senha');
+    const campoNome = document.getElementById('pesquisa')
+    const campoTelefone = document.getElementById('telefone')
+    const campoEmail = document.getElementById('email')
+    const senhaOld = document.getElementById('senhaold')
+    const novaSenha = document.getElementById('senha')
 
     if (!isLogged) {
-        window.location.href = '../Home/index.html';
+        window.location.href = '../Home/index.html'
     }
 
-    // Obtendo os usuários armazenados no localStorage
-    var usuariosArmazenados = localStorage.getItem('usuarios');
-    var userLogged = localStorage.getItem('userLogged');
+    const usuarios = JSON.parse(localStorage.getItem('usuarios'))
+    const userLogged = localStorage.getItem('userLogged')
 
-    // Verificando se há usuários armazenados
-    if (usuariosArmazenados) {
-        // Fazendo o parsing da string JSON para um objeto
-        var usuarios = JSON.parse(usuariosArmazenados);
+    let usuarioEncontrado = usuarios.find(
+        (usuario) => usuario.usuario == userLogged
+    )
 
-        // Procurando pelo nome de usuário
-        var usuarioEncontrado = usuarios.find(function (usuario) {
-            return usuario.usuario === userLogged;
-        });
+    campoNome.value = usuarioEncontrado.usuario
+    campoTelefone.value = usuarioEncontrado.celular
+    campoEmail.value = usuarioEncontrado.email
 
-        if (usuarioEncontrado) {
-            // Preenchendo os campos com os valores do usuário encontrado
-            campoNome.value = usuarioEncontrado.usuario;
-            campoTelefone.value = usuarioEncontrado.celular;
-            campoEmail.value = usuarioEncontrado.email;
-        } else {
-            console.log('Usuário não encontrado.');
+    document.getElementById('alterar').addEventListener('click', (event) => {
+        event.preventDefault()
+
+        if (usuarioEncontrado.senha !== senhaOld.value) {
+            alert(
+                'Senha antiga incorreta. Por favor, digite a senha antiga correta.'
+            )
+            return
         }
-    } else {
-        console.log('Nenhum usuário encontrado no localStorage.');
-    }
 
-    // Evento para alterar os dados
-document.getElementById('alterar').addEventListener('click', function (event) {
-    event.preventDefault();
+        usuarioEncontrado.usuario = campoNome.value
+        usuarioEncontrado.celular = campoTelefone.value
+        usuarioEncontrado.email = campoEmail.value
+        usuarioEncontrado.senha = novaSenha.value
 
-    // Verificar se a senha antiga é a mesma cadastrada
-    if (usuarioEncontrado.senha !== senhaOld.value) {
-        alert('Senha antiga incorreta. Por favor, digite a senha antiga correta.');
-        return;
-    }
+        localStorage.setItem('usuarios', JSON.stringify(usuarios))
+        localStorage.setItem(
+            'userLogged',
+            JSON.stringify(usuarioEncontrado.usuario)
+        )
 
-    // Atualizando os dados do usuário
-    usuarioEncontrado.usuario = campoNome.value;
-    usuarioEncontrado.celular = campoTelefone.value;
-    usuarioEncontrado.email = campoEmail.value;
-    usuarioEncontrado.senha = novaSenha.value;
+        alert('Dados alterados com sucesso!')
+        location.reload()
+    })
 
-    // Salvando os usuários atualizados no localStorage
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    document.getElementById('deletar').addEventListener('click', (event) => {
+        event.preventDefault()
 
-    alert('Dados alterados com sucesso!');
-});
+        let new_usuarios = usuarios.filter(
+            (usuario) => usuario.usuario !== usuarioEncontrado.usuario
+        )
 
+        localStorage.setItem('usuarios', JSON.stringify(new_usuarios))
+        localStorage.setItem('isLogged', null)
+        localStorage.setItem('userLogged', null)
 
-    // Evento para deletar o usuário
-    document.getElementById('deletar').addEventListener('click', function (event) {
-        event.preventDefault();
-
-        // Removendo o usuário do array de usuários
-        usuarios = usuarios.filter(function (usuario) {
-            return usuario.usuario !== usuarioEncontrado.usuario;
-        });
-
-        // Salvando os usuários atualizados no localStorage
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-        alert('Usuário deletado com sucesso!');
-        window.location.href = '../Home/index.html';
-    });
+        alert('Usuário deletado com sucesso!')
+        window.location.href = '../Home/index.html'
+    })
 }
 
 window.onload = function () {
-    handleUsuarioConnected();
-};
+    handleUsuarioConnected()
+}
